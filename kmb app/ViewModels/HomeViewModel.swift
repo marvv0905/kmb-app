@@ -4,18 +4,22 @@ import CoreLocation
 
 @MainActor
 @Observable
-final class HomeViewModel {
+final class HomeViewModel: NSObject, CLLocationManagerDelegate {
     var nearbyStops: [StopWithETA] = []
     var isLoading = false
     var errorMessage: String?
     var isSyncing = false
     var syncError: String?
+    var showPermissionPrompt: Bool
+    var locationPermissionDenied = false
 
     private let database = AppDatabase.shared
     private let stopRepo: StopRepository
     private let client = KMBAPIClient()
     private let decoder = JSONDecoder()
     private let locationManager = CLLocationManager()
+
+    private static let fallbackLocation = CLLocationCoordinate2D(latitude: 22.3193, longitude: 114.1694)
 
     struct StopWithETA: Identifiable {
         var id: String { "\(stop.operatorType.rawValue)-\(stop.rawStopId)" }
@@ -26,16 +30,59 @@ final class HomeViewModel {
         var displayName: String {
             LanguageHelper.stopName(en: stop.nameEn, tc: stop.nameTc, sc: stop.nameSc)
         }
+
+        var distanceDisplay: String {
+            "\(Int(distance))m"
+        }
     }
 
-    init() {
+    override init() {
         stopRepo = StopRepository(database: database)
-        locationManager.requestWhenInUseAuthorization()
+        let status = CLLocationManager().authorizationStatus
+        showPermissionPrompt = (status == .notDetermined || status == .denied)
+        super.init()
+        locationManager.delegate = self
+        locationManager.desiredAccuracy = kCLLocationAccuracyHundredMeters
     }
 
     func start() async {
         await syncIfNeeded()
         await refreshStops()
+    }
+
+    func requestPermission() {
+        showPermissionPrompt = false
+        locationManager.requestWhenInUseAuthorization()
+    }
+
+    func useWithoutLocation() {
+        showPermissionPrompt = false
+        locationPermissionDenied = true
+        Task { await refreshStops() }
+    }
+
+    func locationManagerDidChangeAuthorization(_ manager: CLLocationManager) {
+        let status = manager.authorizationStatus
+        switch status {
+        case .authorizedWhenInUse, .authorizedAlways:
+            locationPermissionDenied = false
+            manager.requestLocation()
+        case .denied, .restricted:
+            locationPermissionDenied = true
+        default:
+            break
+        }
+        Task { await refreshStops() }
+    }
+
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        Task {
+            await refreshStops()
+        }
+    }
+
+    func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
+        locationPermissionDenied = true
     }
 
     private func syncIfNeeded() async {
@@ -82,22 +129,27 @@ final class HomeViewModel {
         errorMessage = nil
         do {
             let allStops = try await stopRepo.stopsForOperator(.kmb)
-            let userLoc = locationManager.location?.coordinate
+            let userLoc: CLLocationCoordinate2D
+            let status = locationManager.authorizationStatus
+            if status == .authorizedWhenInUse || status == .authorizedAlways,
+               let loc = locationManager.location?.coordinate {
+                userLoc = loc
+            } else {
+                userLoc = Self.fallbackLocation
+            }
+
+            let distanceToHK = haversine(from: userLoc, to: Self.fallbackLocation)
+            let effectiveLoc = distanceToHK > 5000 ? Self.fallbackLocation : userLoc
 
             let withDistances: [(BusStop, Double)] = allStops.map { stop in
-                let dist = userLoc.map { haversine(from: $0, to: stop.coordinate) } ?? 0
-                return (stop, dist)
+                (stop, haversine(from: effectiveLoc, to: stop.coordinate))
             }
 
-            let nearby: [(BusStop, Double)]
-            if userLoc != nil {
-                nearby = withDistances.filter { $0.1 <= 500 }.sorted { $0.1 < $1.1 }
-            } else {
-                nearby = Array(withDistances.prefix(20))
-            }
+            let nearby = withDistances
+                .filter { $0.1 <= 500 }
+                .sorted { $0.1 < $1.1 }
 
             nearbyStops = nearby.map { StopWithETA(stop: $0.0, distance: $0.1, etas: []) }
-
             await fetchETAsForNearbyStops()
         } catch {
             errorMessage = error.localizedDescription

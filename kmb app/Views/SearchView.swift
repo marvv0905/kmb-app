@@ -32,16 +32,6 @@ struct SearchView: View {
                 .font(viewModel.inputText.isEmpty ? .brutalBody : .brutalNumber)
                 .foregroundStyle(viewModel.inputText.isEmpty ? BrutalTheme.textSecondary : BrutalTheme.text)
                 .frame(maxWidth: .infinity, alignment: .leading)
-
-            if !viewModel.inputText.isEmpty {
-                Button {
-                    viewModel.backspace()
-                } label: {
-                    Image(systemName: "delete.backward.fill")
-                        .font(.title3)
-                        .foregroundStyle(BrutalTheme.textSecondary)
-                }
-            }
         }
         .padding(.horizontal)
         .padding(.vertical, 12)
@@ -146,7 +136,7 @@ struct SearchView: View {
                 BrutalKeyButton(label: "0", font: .brutalNumber) {
                     viewModel.appendDigit("0")
                 }
-                BrutalKeyButton(label: "⌫", font: .brutalNumber) {
+                BrutalKeyButton(label: "⌫", font: .system(size: 26.5, weight: .bold)) {
                     viewModel.backspace()
                 }
             }

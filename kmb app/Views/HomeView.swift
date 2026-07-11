@@ -6,7 +6,45 @@ struct HomeView: View {
     var body: some View {
         NavigationStack {
             Group {
-                if viewModel.isLoading && viewModel.nearbyStops.isEmpty {
+                if viewModel.showPermissionPrompt {
+                    VStack(spacing: 16) {
+                        Image(systemName: "location.fill")
+                            .font(.system(size: 48, weight: .heavy))
+                        Text("Allow Location Access")
+                            .font(.brutalTitle)
+                        Text("Find bus stops near you")
+                            .font(.brutalChineseSmall)
+                            .foregroundStyle(BrutalTheme.textSecondary)
+
+                        HStack(spacing: 12) {
+                            Button {
+                                viewModel.useWithoutLocation()
+                            } label: {
+                                Text("Not Now")
+                                    .font(.brutalSmall)
+                                    .foregroundStyle(BrutalTheme.textSecondary)
+                                    .padding(.vertical, 12)
+                                    .padding(.horizontal, 24)
+                                    .overlay(
+                                        Rectangle()
+                                            .stroke(BrutalTheme.border, lineWidth: 1.5)
+                                    )
+                            }
+
+                            Button {
+                                viewModel.requestPermission()
+                            } label: {
+                                Text("Enable Location")
+                                    .font(.brutalBody)
+                                    .foregroundStyle(.white)
+                                    .padding(.vertical, 12)
+                                    .padding(.horizontal, 24)
+                                    .background(BrutalTheme.accent)
+                            }
+                        }
+                    }
+                    .frame(maxWidth: .infinity, maxHeight: .infinity)
+                } else if viewModel.isLoading && viewModel.nearbyStops.isEmpty {
                     ProgressView("Loading nearby stops...")
                         .font(.brutalBody)
                 } else if let error = viewModel.errorMessage, viewModel.nearbyStops.isEmpty {
@@ -43,13 +81,24 @@ struct HomeView: View {
                             .listRowBackground(BrutalTheme.bg)
                         }
 
+                        if viewModel.locationPermissionDenied {
+                            HStack {
+                                Image(systemName: "location.slash.fill")
+                                    .foregroundStyle(BrutalTheme.accent)
+                                Text("Location unavailable — showing Hong Kong centre")
+                                    .font(.brutalSmall)
+                                    .foregroundStyle(BrutalTheme.textSecondary)
+                            }
+                            .listRowBackground(BrutalTheme.bg)
+                        }
+
                         ForEach(viewModel.nearbyStops) { item in
                             HStack(alignment: .top) {
                                 VStack(alignment: .leading, spacing: 2) {
                                     Text(item.displayName)
                                         .font(.brutalChineseBody)
 
-                                    Text("\(Int(item.distance))m")
+                                    Text(item.distanceDisplay)
                                         .font(.brutalSmall)
                                         .foregroundStyle(BrutalTheme.textSecondary)
                                 }

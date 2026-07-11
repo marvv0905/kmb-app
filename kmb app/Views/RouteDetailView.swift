@@ -60,13 +60,15 @@ struct RouteDetailView: View {
         Map(position: $viewModel.mapPosition) {
             ForEach(viewModel.stopDetails) { stop in
                 Annotation(stop.displayName, coordinate: stop.coordinate) {
-                    BrutalStopMarker(
-                        seq: stop.seq,
-                        isSelected: viewModel.expandedSeq == stop.seq
-                    )
-                    .onTapGesture {
+                    Button {
                         viewModel.selectStop(stop.seq)
+                    } label: {
+                        BrutalStopMarker(
+                            seq: stop.seq,
+                            isSelected: viewModel.expandedSeq == stop.seq
+                        )
                     }
+                    .buttonStyle(.plain)
                 }
             }
 

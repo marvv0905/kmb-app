@@ -114,8 +114,8 @@ final class RouteDetailViewModel {
 
     private func routeSegment(from: CLLocationCoordinate2D, to: CLLocationCoordinate2D) async throws -> [CLLocationCoordinate2D] {
         let request = MKDirections.Request()
-        request.source = MKMapItem(location: CLLocation(latitude: from.latitude, longitude: from.longitude), address: nil)
-        request.destination = MKMapItem(location: CLLocation(latitude: to.latitude, longitude: to.longitude), address: nil)
+        request.source = MKMapItem(placemark: MKPlacemark(coordinate: from))
+        request.destination = MKMapItem(placemark: MKPlacemark(coordinate: to))
         request.transportType = .automobile
 
         let directions = MKDirections(request: request)
