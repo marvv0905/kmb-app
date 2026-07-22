@@ -1,0 +1,867 @@
+{
+  "version": "1.0.0",
+  "project": {
+    "name": "kmb app",
+    "languages": [
+      "swift"
+    ],
+    "frameworks": [
+      "SwiftUI",
+      "MapKit",
+      "CoreLocation",
+      "SQLite3"
+    ],
+    "description": "Ad-free KMB bus ETA iOS app with brutalist design. Single-operator (KMB) MVP with 3-tab navigation (Nearby stops, Route search, Settings), SQLite3 persistence, and live ETA polling.",
+    "analyzedAt": "2026-07-21T06:05:27.508Z",
+    "gitCommitHash": "3f923214df5f046999590826ec561f08aab5c6cb"
+  },
+  "nodes": [
+    {
+      "id": "document:AGENTS.md",
+      "type": "document",
+      "name": "AGENTS.md",
+      "filePath": "AGENTS.md",
+      "summary": "Documentation for AGENTS.md",
+      "tags": [
+        "markdown",
+        "docs"
+      ]
+    },
+    {
+      "id": "file:kmb app.xcodeproj/project.pbxproj",
+      "type": "file",
+      "name": "project.pbxproj",
+      "filePath": "kmb app.xcodeproj/project.pbxproj",
+      "summary": "Source code for project.pbxproj",
+      "tags": [
+        "pbxproj",
+        "code"
+      ]
+    },
+    {
+      "id": "file:kmb app.xcodeproj/project.xcworkspace/contents.xcworkspacedata",
+      "type": "file",
+      "name": "contents.xcworkspacedata",
+      "filePath": "kmb app.xcodeproj/project.xcworkspace/contents.xcworkspacedata",
+      "summary": "Source code for contents.xcworkspacedata",
+      "tags": [
+        "xcworkspacedata",
+        "code"
+      ]
+    },
+    {
+      "id": "file:kmb app.xcodeproj/project.xcworkspace/xcshareddata/WorkspaceSettings.xcsettings",
+      "type": "file",
+      "name": "WorkspaceSettings.xcsettings",
+      "filePath": "kmb app.xcodeproj/project.xcworkspace/xcshareddata/WorkspaceSettings.xcsettings",
+      "summary": "Source code for WorkspaceSettings.xcsettings",
+      "tags": [
+        "xcsettings",
+        "code"
+      ]
+    },
+    {
+      "id": "file:kmb app.xcodeproj/project.xcworkspace/xcuserdata/j__tin.xcuserdatad/WorkspaceSettings.xcsettings",
+      "type": "file",
+      "name": "WorkspaceSettings.xcsettings",
+      "filePath": "kmb app.xcodeproj/project.xcworkspace/xcuserdata/j__tin.xcuserdatad/WorkspaceSettings.xcsettings",
+      "summary": "Source code for WorkspaceSettings.xcsettings",
+      "tags": [
+        "xcsettings",
+        "code"
+      ]
+    },
+    {
+      "id": "config:kmb app.xcodeproj/xcuserdata/j__tin.xcuserdatad/xcschemes/xcschememanagement.plist",
+      "type": "config",
+      "name": "xcschememanagement.plist",
+      "filePath": "kmb app.xcodeproj/xcuserdata/j__tin.xcuserdatad/xcschemes/xcschememanagement.plist",
+      "summary": "Configuration for xcschememanagement.plist",
+      "tags": [
+        "xml",
+        "config"
+      ]
+    },
+    {
+      "id": "config:kmb app/Assets.xcassets/AccentColor.colorset/Contents.json",
+      "type": "config",
+      "name": "Contents.json",
+      "filePath": "kmb app/Assets.xcassets/AccentColor.colorset/Contents.json",
+      "summary": "Configuration for Contents.json",
+      "tags": [
+        "json",
+        "config"
+      ]
+    },
+    {
+      "id": "config:kmb app/Assets.xcassets/AppIcon.appiconset/Contents.json",
+      "type": "config",
+      "name": "Contents.json",
+      "filePath": "kmb app/Assets.xcassets/AppIcon.appiconset/Contents.json",
+      "summary": "Configuration for Contents.json",
+      "tags": [
+        "json",
+        "config"
+      ]
+    },
+    {
+      "id": "config:kmb app/Assets.xcassets/Contents.json",
+      "type": "config",
+      "name": "Contents.json",
+      "filePath": "kmb app/Assets.xcassets/Contents.json",
+      "summary": "Configuration for Contents.json",
+      "tags": [
+        "json",
+        "config"
+      ]
+    },
+    {
+      "id": "file:kmb app/Color+App.swift",
+      "type": "file",
+      "name": "Color+App.swift",
+      "filePath": "kmb app/Color+App.swift",
+      "summary": "Source code for Color+App.swift",
+      "tags": [
+        "swift",
+        "code"
+      ]
+    },
+    {
+      "id": "file:kmb app/Models/ArrivalETA.swift",
+      "type": "file",
+      "name": "ArrivalETA.swift",
+      "filePath": "kmb app/Models/ArrivalETA.swift",
+      "summary": "Source code for ArrivalETA.swift",
+      "tags": [
+        "swift",
+        "code"
+      ]
+    },
+    {
+      "id": "file:kmb app/Models/BusOperator.swift",
+      "type": "file",
+      "name": "BusOperator.swift",
+      "filePath": "kmb app/Models/BusOperator.swift",
+      "summary": "Source code for BusOperator.swift",
+      "tags": [
+        "swift",
+        "code"
+      ]
+    },
+    {
+      "id": "file:kmb app/Models/BusRoute.swift",
+      "type": "file",
+      "name": "BusRoute.swift",
+      "filePath": "kmb app/Models/BusRoute.swift",
+      "summary": "Source code for BusRoute.swift",
+      "tags": [
+        "swift",
+        "code"
+      ]
+    },
+    {
+      "id": "file:kmb app/Models/BusStop.swift",
+      "type": "file",
+      "name": "BusStop.swift",
+      "filePath": "kmb app/Models/BusStop.swift",
+      "summary": "Source code for BusStop.swift",
+      "tags": [
+        "swift",
+        "code"
+      ]
+    },
+    {
+      "id": "file:kmb app/Network/KMBAPIClient.swift",
+      "type": "file",
+      "name": "KMBAPIClient.swift",
+      "filePath": "kmb app/Network/KMBAPIClient.swift",
+      "summary": "Source code for KMBAPIClient.swift",
+      "tags": [
+        "swift",
+        "code"
+      ]
+    },
+    {
+      "id": "file:kmb app/Network/KMBDataTypes.swift",
+      "type": "file",
+      "name": "KMBDataTypes.swift",
+      "filePath": "kmb app/Network/KMBDataTypes.swift",
+      "summary": "Source code for KMBDataTypes.swift",
+      "tags": [
+        "swift",
+        "code"
+      ]
+    },
+    {
+      "id": "file:kmb app/Persistence/AppDatabase.swift",
+      "type": "file",
+      "name": "AppDatabase.swift",
+      "filePath": "kmb app/Persistence/AppDatabase.swift",
+      "summary": "Source code for AppDatabase.swift",
+      "tags": [
+        "swift",
+        "code"
+      ]
+    },
+    {
+      "id": "file:kmb app/Persistence/RouteRepository.swift",
+      "type": "file",
+      "name": "RouteRepository.swift",
+      "filePath": "kmb app/Persistence/RouteRepository.swift",
+      "summary": "Source code for RouteRepository.swift",
+      "tags": [
+        "swift",
+        "code"
+      ]
+    },
+    {
+      "id": "file:kmb app/Persistence/StopRepository.swift",
+      "type": "file",
+      "name": "StopRepository.swift",
+      "filePath": "kmb app/Persistence/StopRepository.swift",
+      "summary": "Source code for StopRepository.swift",
+      "tags": [
+        "swift",
+        "code"
+      ]
+    },
+    {
+      "id": "file:kmb app/Persistence/SyncMetaRepository.swift",
+      "type": "file",
+      "name": "SyncMetaRepository.swift",
+      "filePath": "kmb app/Persistence/SyncMetaRepository.swift",
+      "summary": "Source code for SyncMetaRepository.swift",
+      "tags": [
+        "swift",
+        "code"
+      ]
+    },
+    {
+      "id": "file:kmb app/Theme.swift",
+      "type": "file",
+      "name": "Theme.swift",
+      "filePath": "kmb app/Theme.swift",
+      "summary": "Source code for Theme.swift",
+      "tags": [
+        "swift",
+        "code"
+      ]
+    },
+    {
+      "id": "file:kmb app/ViewModels/HomeViewModel.swift",
+      "type": "file",
+      "name": "HomeViewModel.swift",
+      "filePath": "kmb app/ViewModels/HomeViewModel.swift",
+      "summary": "Source code for HomeViewModel.swift",
+      "tags": [
+        "swift",
+        "code"
+      ]
+    },
+    {
+      "id": "file:kmb app/ViewModels/RouteDetailViewModel.swift",
+      "type": "file",
+      "name": "RouteDetailViewModel.swift",
+      "filePath": "kmb app/ViewModels/RouteDetailViewModel.swift",
+      "summary": "Source code for RouteDetailViewModel.swift",
+      "tags": [
+        "swift",
+        "code"
+      ]
+    },
+    {
+      "id": "file:kmb app/ViewModels/SearchViewModel.swift",
+      "type": "file",
+      "name": "SearchViewModel.swift",
+      "filePath": "kmb app/ViewModels/SearchViewModel.swift",
+      "summary": "Source code for SearchViewModel.swift",
+      "tags": [
+        "swift",
+        "code"
+      ]
+    },
+    {
+      "id": "file:kmb app/Views/HomeView.swift",
+      "type": "file",
+      "name": "HomeView.swift",
+      "filePath": "kmb app/Views/HomeView.swift",
+      "summary": "Source code for HomeView.swift",
+      "tags": [
+        "swift",
+        "code"
+      ]
+    },
+    {
+      "id": "file:kmb app/Views/LanguageHelper.swift",
+      "type": "file",
+      "name": "LanguageHelper.swift",
+      "filePath": "kmb app/Views/LanguageHelper.swift",
+      "summary": "Source code for LanguageHelper.swift",
+      "tags": [
+        "swift",
+        "code"
+      ]
+    },
+    {
+      "id": "file:kmb app/Views/RouteDetailView.swift",
+      "type": "file",
+      "name": "RouteDetailView.swift",
+      "filePath": "kmb app/Views/RouteDetailView.swift",
+      "summary": "Source code for RouteDetailView.swift",
+      "tags": [
+        "swift",
+        "code"
+      ]
+    },
+    {
+      "id": "file:kmb app/Views/SearchView.swift",
+      "type": "file",
+      "name": "SearchView.swift",
+      "filePath": "kmb app/Views/SearchView.swift",
+      "summary": "Source code for SearchView.swift",
+      "tags": [
+        "swift",
+        "code"
+      ]
+    },
+    {
+      "id": "file:kmb app/Views/SettingsView.swift",
+      "type": "file",
+      "name": "SettingsView.swift",
+      "filePath": "kmb app/Views/SettingsView.swift",
+      "summary": "Source code for SettingsView.swift",
+      "tags": [
+        "swift",
+        "code"
+      ]
+    },
+    {
+      "id": "file:kmb app/kmb_appApp.swift",
+      "type": "file",
+      "name": "kmb_appApp.swift",
+      "filePath": "kmb app/kmb_appApp.swift",
+      "summary": "Source code for kmb_appApp.swift",
+      "tags": [
+        "swift",
+        "code"
+      ]
+    },
+    {
+      "id": "file:kmb app/service docs/.~lock.KMB_ETA_iOS_App_PRD_v0.3.md#",
+      "type": "file",
+      "name": ".~lock.KMB_ETA_iOS_App_PRD_v0.3.md#",
+      "filePath": "kmb app/service docs/.~lock.KMB_ETA_iOS_App_PRD_v0.3.md#",
+      "summary": "Source code for .~lock.KMB_ETA_iOS_App_PRD_v0.3.md#",
+      "tags": [
+        "md#",
+        "code"
+      ]
+    },
+    {
+      "id": "file:kmb app/service docs/.~lock.KMB_ETA_iOS_App_TRD_v0.3.md#",
+      "type": "file",
+      "name": ".~lock.KMB_ETA_iOS_App_TRD_v0.3.md#",
+      "filePath": "kmb app/service docs/.~lock.KMB_ETA_iOS_App_TRD_v0.3.md#",
+      "summary": "Source code for .~lock.KMB_ETA_iOS_App_TRD_v0.3.md#",
+      "tags": [
+        "md#",
+        "code"
+      ]
+    },
+    {
+      "id": "document:kmb app/service docs/KMB_ETA_iOS_App_PRD_v0.3.md",
+      "type": "document",
+      "name": "KMB_ETA_iOS_App_PRD_v0.3.md",
+      "filePath": "kmb app/service docs/KMB_ETA_iOS_App_PRD_v0.3.md",
+      "summary": "Documentation for KMB_ETA_iOS_App_PRD_v0.3.md",
+      "tags": [
+        "markdown",
+        "docs"
+      ]
+    },
+    {
+      "id": "document:kmb app/service docs/KMB_ETA_iOS_App_TRD_v0.3.md",
+      "type": "document",
+      "name": "KMB_ETA_iOS_App_TRD_v0.3.md",
+      "filePath": "kmb app/service docs/KMB_ETA_iOS_App_TRD_v0.3.md",
+      "summary": "Documentation for KMB_ETA_iOS_App_TRD_v0.3.md",
+      "tags": [
+        "markdown",
+        "docs"
+      ]
+    },
+    {
+      "id": "document:kmb app/service docs/VERSION_HISTORY.md",
+      "type": "document",
+      "name": "VERSION_HISTORY.md",
+      "filePath": "kmb app/service docs/VERSION_HISTORY.md",
+      "summary": "Documentation for VERSION_HISTORY.md",
+      "tags": [
+        "markdown",
+        "docs"
+      ]
+    },
+    {
+      "id": "file:kmb appTests/kmb_appTests.swift",
+      "type": "file",
+      "name": "kmb_appTests.swift",
+      "filePath": "kmb appTests/kmb_appTests.swift",
+      "summary": "Source code for kmb_appTests.swift",
+      "tags": [
+        "swift",
+        "code"
+      ]
+    },
+    {
+      "id": "file:kmb appUITests/kmb_appUITests.swift",
+      "type": "file",
+      "name": "kmb_appUITests.swift",
+      "filePath": "kmb appUITests/kmb_appUITests.swift",
+      "summary": "Source code for kmb_appUITests.swift",
+      "tags": [
+        "swift",
+        "code"
+      ]
+    },
+    {
+      "id": "file:kmb appUITests/kmb_appUITestsLaunchTests.swift",
+      "type": "file",
+      "name": "kmb_appUITestsLaunchTests.swift",
+      "filePath": "kmb appUITests/kmb_appUITestsLaunchTests.swift",
+      "summary": "Source code for kmb_appUITestsLaunchTests.swift",
+      "tags": [
+        "swift",
+        "code"
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:kmb app/Persistence/StopRepository.swift",
+      "target": "file:kmb app/Models/BusStop.swift",
+      "type": "imports",
+      "weight": 0.7
+    },
+    {
+      "source": "file:kmb app/Persistence/RouteRepository.swift",
+      "target": "file:kmb app/Models/BusRoute.swift",
+      "type": "imports",
+      "weight": 0.7
+    },
+    {
+      "source": "file:kmb app/Persistence/RouteRepository.swift",
+      "target": "file:kmb app/Network/KMBDataTypes.swift",
+      "type": "imports",
+      "weight": 0.7
+    },
+    {
+      "source": "file:kmb app/ViewModels/HomeViewModel.swift",
+      "target": "file:kmb app/Persistence/AppDatabase.swift",
+      "type": "imports",
+      "weight": 0.7
+    },
+    {
+      "source": "file:kmb app/ViewModels/HomeViewModel.swift",
+      "target": "file:kmb app/Network/KMBAPIClient.swift",
+      "type": "imports",
+      "weight": 0.7
+    },
+    {
+      "source": "file:kmb app/ViewModels/HomeViewModel.swift",
+      "target": "file:kmb app/Models/BusStop.swift",
+      "type": "imports",
+      "weight": 0.7
+    },
+    {
+      "source": "file:kmb app/ViewModels/HomeViewModel.swift",
+      "target": "file:kmb app/Views/LanguageHelper.swift",
+      "type": "imports",
+      "weight": 0.7
+    },
+    {
+      "source": "file:kmb app/ViewModels/SearchViewModel.swift",
+      "target": "file:kmb app/Persistence/AppDatabase.swift",
+      "type": "imports",
+      "weight": 0.7
+    },
+    {
+      "source": "file:kmb app/ViewModels/SearchViewModel.swift",
+      "target": "file:kmb app/Models/BusStop.swift",
+      "type": "imports",
+      "weight": 0.7
+    },
+    {
+      "source": "file:kmb app/ViewModels/RouteDetailViewModel.swift",
+      "target": "file:kmb app/Persistence/AppDatabase.swift",
+      "type": "imports",
+      "weight": 0.7
+    },
+    {
+      "source": "file:kmb app/ViewModels/RouteDetailViewModel.swift",
+      "target": "file:kmb app/Network/KMBAPIClient.swift",
+      "type": "imports",
+      "weight": 0.7
+    },
+    {
+      "source": "file:kmb app/ViewModels/RouteDetailViewModel.swift",
+      "target": "file:kmb app/Models/BusStop.swift",
+      "type": "imports",
+      "weight": 0.7
+    },
+    {
+      "source": "file:kmb app/ViewModels/RouteDetailViewModel.swift",
+      "target": "file:kmb app/Views/LanguageHelper.swift",
+      "type": "imports",
+      "weight": 0.7
+    },
+    {
+      "source": "file:kmb app/Views/HomeView.swift",
+      "target": "file:kmb app/ViewModels/HomeViewModel.swift",
+      "type": "imports",
+      "weight": 0.7
+    },
+    {
+      "source": "file:kmb app/Views/HomeView.swift",
+      "target": "file:kmb app/Models/ArrivalETA.swift",
+      "type": "imports",
+      "weight": 0.7
+    },
+    {
+      "source": "file:kmb app/Views/HomeView.swift",
+      "target": "file:kmb app/Theme.swift",
+      "type": "imports",
+      "weight": 0.7
+    },
+    {
+      "source": "file:kmb app/Views/SearchView.swift",
+      "target": "file:kmb app/ViewModels/SearchViewModel.swift",
+      "type": "imports",
+      "weight": 0.7
+    },
+    {
+      "source": "file:kmb app/Views/SearchView.swift",
+      "target": "file:kmb app/ViewModels/RouteDetailViewModel.swift",
+      "type": "imports",
+      "weight": 0.7
+    },
+    {
+      "source": "file:kmb app/Views/SearchView.swift",
+      "target": "file:kmb app/Views/RouteDetailView.swift",
+      "type": "imports",
+      "weight": 0.7
+    },
+    {
+      "source": "file:kmb app/Views/SearchView.swift",
+      "target": "file:kmb app/Theme.swift",
+      "type": "imports",
+      "weight": 0.7
+    },
+    {
+      "source": "file:kmb app/Views/RouteDetailView.swift",
+      "target": "file:kmb app/ViewModels/RouteDetailViewModel.swift",
+      "type": "imports",
+      "weight": 0.7
+    },
+    {
+      "source": "file:kmb app/Views/RouteDetailView.swift",
+      "target": "file:kmb app/Theme.swift",
+      "type": "imports",
+      "weight": 0.7
+    },
+    {
+      "source": "file:kmb app/Views/RouteDetailView.swift",
+      "target": "file:kmb app/Views/LanguageHelper.swift",
+      "type": "imports",
+      "weight": 0.7
+    },
+    {
+      "source": "file:kmb app/Views/SettingsView.swift",
+      "target": "file:kmb app/Views/LanguageHelper.swift",
+      "type": "imports",
+      "weight": 0.7
+    },
+    {
+      "source": "file:kmb app/Views/SettingsView.swift",
+      "target": "file:kmb app/Theme.swift",
+      "type": "imports",
+      "weight": 0.7
+    },
+    {
+      "source": "file:kmb app/Theme.swift",
+      "target": "file:kmb app/Color+App.swift",
+      "type": "imports",
+      "weight": 0.7
+    },
+    {
+      "source": "file:kmb app/kmb_appApp.swift",
+      "target": "file:kmb app/Views/HomeView.swift",
+      "type": "imports",
+      "weight": 0.7
+    },
+    {
+      "source": "file:kmb app/kmb_appApp.swift",
+      "target": "file:kmb app/Views/SearchView.swift",
+      "type": "imports",
+      "weight": 0.7
+    },
+    {
+      "source": "file:kmb app/kmb_appApp.swift",
+      "target": "file:kmb app/Views/SettingsView.swift",
+      "type": "imports",
+      "weight": 0.7
+    },
+    {
+      "source": "file:kmb app/kmb_appApp.swift",
+      "target": "file:kmb app/Theme.swift",
+      "type": "imports",
+      "weight": 0.7
+    },
+    {
+      "source": "file:kmb app/kmb_appApp.swift",
+      "target": "file:kmb app/Views/HomeView.swift",
+      "type": "calls",
+      "weight": 0.8
+    },
+    {
+      "source": "document:kmb app/service docs/KMB_ETA_iOS_App_PRD_v0.3.md",
+      "target": "file:kmb app/kmb_appApp.swift",
+      "type": "documents",
+      "weight": 0.5
+    },
+    {
+      "source": "document:kmb app/service docs/KMB_ETA_iOS_App_TRD_v0.3.md",
+      "target": "file:kmb app/kmb_appApp.swift",
+      "type": "documents",
+      "weight": 0.5
+    },
+    {
+      "source": "document:kmb app/service docs/VERSION_HISTORY.md",
+      "target": "file:kmb app/kmb_appApp.swift",
+      "type": "documents",
+      "weight": 0.5
+    },
+    {
+      "source": "file:kmb app/Models/BusStop.swift",
+      "target": "file:kmb appTests/kmb_appTests.swift",
+      "type": "tested_by",
+      "weight": 0.5
+    },
+    {
+      "source": "file:kmb app/kmb_appApp.swift",
+      "target": "file:kmb app.xcodeproj/project.pbxproj",
+      "type": "configures",
+      "weight": 0.6
+    },
+    {
+      "source": "file:kmb app/kmb_appApp.swift",
+      "target": "file:kmb app/Theme.swift",
+      "type": "imports",
+      "weight": 0.7
+    },
+    {
+      "source": "document:AGENTS.md",
+      "target": "file:kmb app/kmb_appApp.swift",
+      "type": "documents",
+      "weight": 0.5
+    }
+  ],
+  "layers": [
+    {
+      "id": "layer:app-entry",
+      "name": "App Entry & Composition",
+      "description": "Application entry point, root composition, and custom tab bar implementation",
+      "nodeIds": [
+        "file:kmb app/kmb_appApp.swift"
+      ]
+    },
+    {
+      "id": "layer:theme-config",
+      "name": "Design System & Configuration",
+      "description": "Brutalist design tokens, custom font (Archivo Black), colors, view modifiers, and Xcode build configuration",
+      "nodeIds": [
+        "file:kmb app/Theme.swift",
+        "file:kmb app/Color+App.swift",
+        "file:kmb app.xcodeproj/project.pbxproj",
+        "config:kmb app/Assets.xcassets/Contents.json",
+        "config:kmb app/Assets.xcassets/AccentColor.colorset/Contents.json",
+        "config:kmb app/Assets.xcassets/AppIcon.appiconset/Contents.json",
+        "file:kmb app.xcodeproj/project.xcworkspace/contents.xcworkspacedata",
+        "file:kmb app.xcodeproj/project.xcworkspace/xcshareddata/WorkspaceSettings.xcsettings",
+        "file:kmb app.xcodeproj/project.xcworkspace/xcuserdata/j__tin.xcuserdatad/WorkspaceSettings.xcsettings",
+        "config:kmb app.xcodeproj/xcuserdata/j__tin.xcuserdatad/xcschemes/xcschememanagement.plist"
+      ]
+    },
+    {
+      "id": "layer:domain-models",
+      "name": "Domain Models",
+      "description": "Core data models for bus operators, stops, routes, and arrival ETAs. Pure data structs with no external dependencies",
+      "nodeIds": [
+        "file:kmb app/Models/BusOperator.swift",
+        "file:kmb app/Models/BusStop.swift",
+        "file:kmb app/Models/BusRoute.swift",
+        "file:kmb app/Models/ArrivalETA.swift"
+      ]
+    },
+    {
+      "id": "layer:network",
+      "name": "Network Layer",
+      "description": "KMB API HTTP client and JSON-decoded response types for 5 endpoints (route, stop, route-stop, stop-eta, route-eta)",
+      "nodeIds": [
+        "file:kmb app/Network/KMBAPIClient.swift",
+        "file:kmb app/Network/KMBDataTypes.swift"
+      ]
+    },
+    {
+      "id": "layer:persistence",
+      "name": "Persistence Layer",
+      "description": "SQLite3 wrapper with async read/write, migrations for 4 tables (routes, stops, route_stops, sync_meta), and repository classes",
+      "nodeIds": [
+        "file:kmb app/Persistence/AppDatabase.swift",
+        "file:kmb app/Persistence/StopRepository.swift",
+        "file:kmb app/Persistence/RouteRepository.swift",
+        "file:kmb app/Persistence/SyncMetaRepository.swift"
+      ]
+    },
+    {
+      "id": "layer:view-models",
+      "name": "ViewModels (@Observable)",
+      "description": "MVVM ViewModels using iOS 17 Observation framework. HomeViewModel handles location + nearby stops + ETA polling. SearchViewModel handles keypad input + route prefix matching. RouteDetailViewModel handles map polylines + per-stop ETA expansion",
+      "nodeIds": [
+        "file:kmb app/ViewModels/HomeViewModel.swift",
+        "file:kmb app/ViewModels/SearchViewModel.swift",
+        "file:kmb app/ViewModels/RouteDetailViewModel.swift"
+      ]
+    },
+    {
+      "id": "layer:views",
+      "name": "Views (SwiftUI)",
+      "description": "SwiftUI views for the 3 tabs (Nearby, Search, Settings) and the route detail screen. LanguageHelper provides EN/TC text switching",
+      "nodeIds": [
+        "file:kmb app/Views/HomeView.swift",
+        "file:kmb app/Views/SearchView.swift",
+        "file:kmb app/Views/SettingsView.swift",
+        "file:kmb app/Views/RouteDetailView.swift",
+        "file:kmb app/Views/LanguageHelper.swift"
+      ]
+    },
+    {
+      "id": "layer:documentation",
+      "name": "Design Documentation",
+      "description": "Product Requirements Document, Technical Requirements Document, and development version history",
+      "nodeIds": [
+        "document:kmb app/service docs/KMB_ETA_iOS_App_PRD_v0.3.md",
+        "document:kmb app/service docs/KMB_ETA_iOS_App_TRD_v0.3.md",
+        "document:kmb app/service docs/VERSION_HISTORY.md",
+        "document:AGENTS.md",
+        "file:kmb app/service docs/.~lock.KMB_ETA_iOS_App_PRD_v0.3.md#",
+        "file:kmb app/service docs/.~lock.KMB_ETA_iOS_App_TRD_v0.3.md#"
+      ]
+    },
+    {
+      "id": "layer:tests",
+      "name": "Tests (Stubs)",
+      "description": "Xcode template test stubs — no real assertions yet. Unit tests (Swift Testing) and UI tests (XCUITest)",
+      "nodeIds": [
+        "file:kmb appTests/kmb_appTests.swift",
+        "file:kmb appUITests/kmb_appUITests.swift",
+        "file:kmb appUITests/kmb_appUITestsLaunchTests.swift"
+      ]
+    }
+  ],
+  "tour": [
+    {
+      "order": 1,
+      "title": "App Entry Point",
+      "description": "Start here. kmb_appApp.swift is the @main entry point. It sets up the brutalist UIKit theme, initializes the custom tab bar (Nearby/Search/Settings), and creates the root ContentView.",
+      "nodeIds": [
+        "file:kmb app/kmb_appApp.swift"
+      ]
+    },
+    {
+      "order": 2,
+      "title": "Design System & Theme",
+      "description": "BrutalTheme provides the design tokens (off-white #F2F2F2, KMB red #C8102E, 0-radius). Archivo Black custom font for English labels. Color+App adds the KMB red extension.",
+      "nodeIds": [
+        "file:kmb app/Theme.swift",
+        "file:kmb app/Color+App.swift"
+      ]
+    },
+    {
+      "order": 3,
+      "title": "Domain Models",
+      "description": "Four pure data structs: BusOperator (kmb/ctb/gmb enum), BusStop (coordinate + names), BusRoute (code + destinations), ArrivalETA (countdown + remarks). No imports, no framework dependencies.",
+      "nodeIds": [
+        "file:kmb app/Models/BusOperator.swift",
+        "file:kmb app/Models/BusStop.swift",
+        "file:kmb app/Models/BusRoute.swift",
+        "file:kmb app/Models/ArrivalETA.swift"
+      ]
+    },
+    {
+      "order": 4,
+      "title": "API Integration",
+      "description": "KMBAPIClient wraps URLSession for 5 KMB endpoints. KMBDataTypes defines Codable structs for each response shape. The KMB API returns inconsistent types (seq as string vs int, service_type as string vs int) — separate structs handle each endpoint.",
+      "nodeIds": [
+        "file:kmb app/Network/KMBAPIClient.swift",
+        "file:kmb app/Network/KMBDataTypes.swift"
+      ]
+    },
+    {
+      "order": 5,
+      "title": "SQLite3 Persistence",
+      "description": "Raw SQLite3 C API wrapped in async methods. AppDatabase handles open/migration with auto-recovery on corruption. StopRepository, RouteRepository, and SyncMetaRepository provide typed access. DELETE journal mode (not WAL) avoids a known Simulator corruption bug.",
+      "nodeIds": [
+        "file:kmb app/Persistence/AppDatabase.swift",
+        "file:kmb app/Persistence/StopRepository.swift",
+        "file:kmb app/Persistence/RouteRepository.swift",
+        "file:kmb app/Persistence/SyncMetaRepository.swift"
+      ]
+    },
+    {
+      "order": 6,
+      "title": "Home Tab — Nearby Stops",
+      "description": "HomeViewModel doubles as CLLocationManagerDelegate. On first launch, shows a permission card. Falls back to HK centre coordinates when location is unavailable. Filters 6750+ KMB stops to <500m via haversine. Fetches live ETAs per stop every 25s. HomeView renders the stop list with ETA labels.",
+      "nodeIds": [
+        "file:kmb app/ViewModels/HomeViewModel.swift",
+        "file:kmb app/Views/HomeView.swift"
+      ]
+    },
+    {
+      "order": 7,
+      "title": "Search Tab — Route Search",
+      "description": "Custom alphanumeric keypad built entirely in SwiftUI. SearchViewModel fetches routes from the KMB API directly (bypasses SQLite). Prefix-matching on route codes. Results navigate to RouteDetailView. The keypad has a numeric grid (1-9, C/0/⌫) and a letter grid (A-X).",
+      "nodeIds": [
+        "file:kmb app/ViewModels/SearchViewModel.swift",
+        "file:kmb app/Views/SearchView.swift"
+      ]
+    },
+    {
+      "order": 8,
+      "title": "Route Detail — Map + Stops",
+      "description": "RouteDetailView splits the screen: top 50% is a MapKit map with brutalist stop markers + MKDirections road-following polyline. Bottom 50% is an expandable stop list. RouteDetailViewModel handles stop selection (bidirectional: tap map ↔ tap list), per-stop ETA fetching (GET stop-eta), and TaskGroup-based polyline computation with ordered segment merging.",
+      "nodeIds": [
+        "file:kmb app/ViewModels/RouteDetailViewModel.swift",
+        "file:kmb app/Views/RouteDetailView.swift"
+      ]
+    },
+    {
+      "order": 9,
+      "title": "Settings & Language",
+      "description": "LanguageHelper provides EN/TC text switching via @AppStorage. SettingsView shows a brutalist-styled segmented control. All views use LanguageHelper methods for display text. Chinese text falls back to system heavy-weight PingFang.",
+      "nodeIds": [
+        "file:kmb app/Views/SettingsView.swift",
+        "file:kmb app/Views/LanguageHelper.swift"
+      ]
+    },
+    {
+      "order": 10,
+      "title": "Design Documents",
+      "description": "PRD v0.3 defines the product vision (multi-operator, map-primary, in-vehicle travel time). TRD v0.3 specifies the technical architecture (adapter pattern, GRDB, Swift 6). VERSION_HISTORY.md documents what was actually built vs planned — essential reading for anyone extending the codebase.",
+      "nodeIds": [
+        "document:kmb app/service docs/KMB_ETA_iOS_App_PRD_v0.3.md",
+        "document:kmb app/service docs/KMB_ETA_iOS_App_TRD_v0.3.md",
+        "document:kmb app/service docs/VERSION_HISTORY.md"
+      ]
+    }
+  ]
+}

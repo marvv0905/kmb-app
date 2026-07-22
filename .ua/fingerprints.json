@@ -1,0 +1,2193 @@
+{
+  "version": "1.0.0",
+  "gitCommitHash": "3f923214df5f046999590826ec561f08aab5c6cb",
+  "generatedAt": "2026-07-21T06:06:50.714Z",
+  "files": {
+    "kmb app/Color+App.swift": {
+      "filePath": "kmb app/Color+App.swift",
+      "contentHash": "8762abde0f2827c0d73f28db653dcfeae974b3406fdaef83afc84cf331f832ed",
+      "functions": [],
+      "classes": [
+        {
+          "name": "extension Color",
+          "methods": [],
+          "properties": [
+            "kmbRed"
+          ],
+          "exported": false,
+          "lineCount": 3
+        }
+      ],
+      "imports": [
+        {
+          "source": "SwiftUI",
+          "specifiers": [
+            "SwiftUI"
+          ]
+        }
+      ],
+      "exports": [
+        "kmbRed"
+      ],
+      "totalLines": 6,
+      "hasStructuralAnalysis": true
+    },
+    "kmb app/Models/ArrivalETA.swift": {
+      "filePath": "kmb app/Models/ArrivalETA.swift",
+      "contentHash": "8d1ad356d430d8363ef9197af51f5aa6cfb4a1e7321b498e249fd295dd55adba",
+      "functions": [],
+      "classes": [
+        {
+          "name": "ArrivalETA",
+          "methods": [],
+          "properties": [
+            "id",
+            "operatorType",
+            "routeCode",
+            "stopId",
+            "destEn",
+            "destTc",
+            "destSc",
+            "remarkEn",
+            "remarkTc",
+            "remarkSc",
+            "etaSeq",
+            "etaTime",
+            "minutesAwayOverride",
+            "minutesAway",
+            "destinationDisplay",
+            "remarkDisplay"
+          ],
+          "exported": true,
+          "lineCount": 30
+        }
+      ],
+      "imports": [
+        {
+          "source": "Foundation",
+          "specifiers": [
+            "Foundation"
+          ]
+        }
+      ],
+      "exports": [
+        "id",
+        "operatorType",
+        "routeCode",
+        "stopId",
+        "destEn",
+        "destTc",
+        "destSc",
+        "remarkEn",
+        "remarkTc",
+        "remarkSc",
+        "etaSeq",
+        "etaTime",
+        "minutesAwayOverride",
+        "minutesAway",
+        "destinationDisplay",
+        "remarkDisplay",
+        "ArrivalETA"
+      ],
+      "totalLines": 33,
+      "hasStructuralAnalysis": true
+    },
+    "kmb app/Models/BusOperator.swift": {
+      "filePath": "kmb app/Models/BusOperator.swift",
+      "contentHash": "293f4d26fe9dbc68fdfa3fd16bf6e5b5c32428ebcb60c817ae6a4aaf82ae558b",
+      "functions": [],
+      "classes": [
+        {
+          "name": "BusOperator",
+          "methods": [],
+          "properties": [
+            "kmb",
+            "ctb",
+            "gmb"
+          ],
+          "exported": true,
+          "lineCount": 3
+        }
+      ],
+      "imports": [
+        {
+          "source": "Foundation",
+          "specifiers": [
+            "Foundation"
+          ]
+        }
+      ],
+      "exports": [
+        "BusOperator"
+      ],
+      "totalLines": 6,
+      "hasStructuralAnalysis": true
+    },
+    "kmb app/Models/BusRoute.swift": {
+      "filePath": "kmb app/Models/BusRoute.swift",
+      "contentHash": "f03f3efc487b718fdae3730db9cb86f3fed4bc55f5d1d2c4d349ff956464c357",
+      "functions": [],
+      "classes": [
+        {
+          "name": "BusRoute",
+          "methods": [],
+          "properties": [
+            "id",
+            "operatorType",
+            "routeCode",
+            "bound",
+            "serviceType",
+            "region",
+            "originEn",
+            "originTc",
+            "originSc",
+            "destEn",
+            "destTc",
+            "destSc",
+            "dataTimestamp",
+            "displayLabel"
+          ],
+          "exported": true,
+          "lineCount": 20
+        }
+      ],
+      "imports": [
+        {
+          "source": "Foundation",
+          "specifiers": [
+            "Foundation"
+          ]
+        }
+      ],
+      "exports": [
+        "id",
+        "operatorType",
+        "routeCode",
+        "bound",
+        "serviceType",
+        "region",
+        "originEn",
+        "originTc",
+        "originSc",
+        "destEn",
+        "destTc",
+        "destSc",
+        "dataTimestamp",
+        "displayLabel",
+        "BusRoute"
+      ],
+      "totalLines": 23,
+      "hasStructuralAnalysis": true
+    },
+    "kmb app/Models/BusStop.swift": {
+      "filePath": "kmb app/Models/BusStop.swift",
+      "contentHash": "7df39cd233d7c385313897d43c4c8eb47c8541bc6770986164f444e0636d5968",
+      "functions": [],
+      "classes": [
+        {
+          "name": "BusStop",
+          "methods": [],
+          "properties": [
+            "id",
+            "operatorType",
+            "rawStopId",
+            "nameEn",
+            "nameTc",
+            "nameSc",
+            "latitude",
+            "longitude",
+            "region",
+            "dataTimestamp",
+            "coordinate"
+          ],
+          "exported": true,
+          "lineCount": 16
+        }
+      ],
+      "imports": [
+        {
+          "source": "Foundation",
+          "specifiers": [
+            "Foundation"
+          ]
+        },
+        {
+          "source": "CoreLocation",
+          "specifiers": [
+            "CoreLocation"
+          ]
+        }
+      ],
+      "exports": [
+        "id",
+        "operatorType",
+        "rawStopId",
+        "nameEn",
+        "nameTc",
+        "nameSc",
+        "latitude",
+        "longitude",
+        "region",
+        "dataTimestamp",
+        "coordinate",
+        "BusStop"
+      ],
+      "totalLines": 20,
+      "hasStructuralAnalysis": true
+    },
+    "kmb app/Network/KMBAPIClient.swift": {
+      "filePath": "kmb app/Network/KMBAPIClient.swift",
+      "contentHash": "6cef31e65d50a983208efb0a5fee64a8f6e43e1fd60d23680e1a32b86314d6e4",
+      "functions": [
+        {
+          "name": "KMBAPIClient.init",
+          "params": [],
+          "exported": true,
+          "lineCount": 6
+        },
+        {
+          "name": "fetchRoutes",
+          "params": [],
+          "returnType": "Data",
+          "exported": true,
+          "lineCount": 3
+        },
+        {
+          "name": "fetchStops",
+          "params": [],
+          "returnType": "Data",
+          "exported": true,
+          "lineCount": 3
+        },
+        {
+          "name": "fetchRouteStops",
+          "params": [],
+          "returnType": "Data",
+          "exported": true,
+          "lineCount": 3
+        },
+        {
+          "name": "fetchStopETA",
+          "params": [
+            "stopId"
+          ],
+          "returnType": "Data",
+          "exported": true,
+          "lineCount": 3
+        },
+        {
+          "name": "fetchRouteETA",
+          "params": [
+            "route",
+            "serviceType"
+          ],
+          "returnType": "Data",
+          "exported": true,
+          "lineCount": 3
+        },
+        {
+          "name": "get",
+          "params": [
+            "path"
+          ],
+          "returnType": "Data",
+          "exported": false,
+          "lineCount": 19
+        }
+      ],
+      "classes": [
+        {
+          "name": "KMBAPIClient",
+          "methods": [
+            "init",
+            "fetchRoutes",
+            "fetchStops",
+            "fetchRouteStops",
+            "fetchStopETA",
+            "fetchRouteETA",
+            "get"
+          ],
+          "properties": [
+            "baseURL",
+            "session"
+          ],
+          "exported": true,
+          "lineCount": 51
+        },
+        {
+          "name": "KMBError",
+          "methods": [],
+          "properties": [
+            "invalidURL",
+            "invalidResponse",
+            "notFound",
+            "serverError",
+            "httpError",
+            "decodingError",
+            "errorDescription"
+          ],
+          "exported": true,
+          "lineCount": 19
+        }
+      ],
+      "imports": [
+        {
+          "source": "Foundation",
+          "specifiers": [
+            "Foundation"
+          ]
+        }
+      ],
+      "exports": [
+        "KMBAPIClient.init",
+        "fetchRoutes",
+        "fetchStops",
+        "fetchRouteStops",
+        "fetchStopETA",
+        "fetchRouteETA",
+        "KMBAPIClient",
+        "errorDescription",
+        "KMBError"
+      ],
+      "totalLines": 74,
+      "hasStructuralAnalysis": true
+    },
+    "kmb app/Network/KMBDataTypes.swift": {
+      "filePath": "kmb app/Network/KMBDataTypes.swift",
+      "contentHash": "b9254033748be2df47edb5ab0b7906a32dbd72be1941a91151ad3d9a5a35625d",
+      "functions": [],
+      "classes": [
+        {
+          "name": "KMBResponse",
+          "methods": [],
+          "properties": [
+            "data"
+          ],
+          "exported": true,
+          "lineCount": 3
+        },
+        {
+          "name": "KMBRouteData",
+          "methods": [],
+          "properties": [
+            "route",
+            "bound",
+            "serviceType",
+            "origEn",
+            "origTc",
+            "origSc",
+            "destEn",
+            "destTc",
+            "destSc"
+          ],
+          "exported": true,
+          "lineCount": 22
+        },
+        {
+          "name": "CodingKeys",
+          "methods": [],
+          "properties": [
+            "route",
+            "bound",
+            "serviceType",
+            "origEn",
+            "origTc",
+            "origSc",
+            "destEn",
+            "destTc",
+            "destSc"
+          ],
+          "exported": true,
+          "lineCount": 10
+        },
+        {
+          "name": "KMBStopData",
+          "methods": [],
+          "properties": [
+            "stop",
+            "nameEn",
+            "nameTc",
+            "nameSc",
+            "lat",
+            "long"
+          ],
+          "exported": true,
+          "lineCount": 16
+        },
+        {
+          "name": "CodingKeys",
+          "methods": [],
+          "properties": [
+            "stop",
+            "nameEn",
+            "nameTc",
+            "nameSc",
+            "lat",
+            "long"
+          ],
+          "exported": true,
+          "lineCount": 7
+        },
+        {
+          "name": "KMBRouteStopData",
+          "methods": [],
+          "properties": [
+            "route",
+            "bound",
+            "serviceType",
+            "seq",
+            "stop"
+          ],
+          "exported": true,
+          "lineCount": 13
+        },
+        {
+          "name": "CodingKeys",
+          "methods": [],
+          "properties": [
+            "route",
+            "bound",
+            "serviceType",
+            "seq",
+            "stop"
+          ],
+          "exported": true,
+          "lineCount": 5
+        },
+        {
+          "name": "KMBETAData",
+          "methods": [],
+          "properties": [
+            "route",
+            "dir",
+            "destEn",
+            "destTc",
+            "destSc",
+            "etaSeq",
+            "eta",
+            "rmkEn",
+            "rmkTc",
+            "rmkSc"
+          ],
+          "exported": true,
+          "lineCount": 24
+        },
+        {
+          "name": "CodingKeys",
+          "methods": [],
+          "properties": [
+            "route",
+            "dir",
+            "destEn",
+            "destTc",
+            "destSc",
+            "etaSeq",
+            "eta",
+            "rmkEn",
+            "rmkTc",
+            "rmkSc"
+          ],
+          "exported": true,
+          "lineCount": 11
+        },
+        {
+          "name": "KMBRouteETAData",
+          "methods": [],
+          "properties": [
+            "route",
+            "dir",
+            "serviceType",
+            "seq",
+            "destEn",
+            "destTc",
+            "destSc",
+            "etaSeq",
+            "eta",
+            "rmkEn",
+            "rmkTc",
+            "rmkSc"
+          ],
+          "exported": true,
+          "lineCount": 28
+        },
+        {
+          "name": "CodingKeys",
+          "methods": [],
+          "properties": [
+            "route",
+            "dir",
+            "serviceType",
+            "seq",
+            "destEn",
+            "destTc",
+            "destSc",
+            "etaSeq",
+            "eta",
+            "rmkEn",
+            "rmkTc",
+            "rmkSc"
+          ],
+          "exported": true,
+          "lineCount": 13
+        }
+      ],
+      "imports": [
+        {
+          "source": "Foundation",
+          "specifiers": [
+            "Foundation"
+          ]
+        }
+      ],
+      "exports": [
+        "data",
+        "KMBResponse",
+        "route",
+        "bound",
+        "serviceType",
+        "origEn",
+        "origTc",
+        "origSc",
+        "destEn",
+        "destTc",
+        "destSc",
+        "KMBRouteData",
+        "CodingKeys",
+        "stop",
+        "nameEn",
+        "nameTc",
+        "nameSc",
+        "lat",
+        "long",
+        "KMBStopData",
+        "CodingKeys",
+        "route",
+        "bound",
+        "serviceType",
+        "seq",
+        "stop",
+        "KMBRouteStopData",
+        "CodingKeys",
+        "route",
+        "dir",
+        "destEn",
+        "destTc",
+        "destSc",
+        "etaSeq",
+        "eta",
+        "rmkEn",
+        "rmkTc",
+        "rmkSc",
+        "KMBETAData",
+        "CodingKeys",
+        "route",
+        "dir",
+        "serviceType",
+        "seq",
+        "destEn",
+        "destTc",
+        "destSc",
+        "etaSeq",
+        "eta",
+        "rmkEn",
+        "rmkTc",
+        "rmkSc",
+        "KMBRouteETAData",
+        "CodingKeys"
+      ],
+      "totalLines": 114,
+      "hasStructuralAnalysis": true
+    },
+    "kmb app/Persistence/AppDatabase.swift": {
+      "filePath": "kmb app/Persistence/AppDatabase.swift",
+      "contentHash": "d54b7bc159f77fcbd6af58e80108c7aa51751b0c11f411690abf943858d48daa",
+      "functions": [
+        {
+          "name": "AppDatabase.init",
+          "params": [],
+          "exported": true,
+          "lineCount": 7
+        },
+        {
+          "name": "openAndMigrate",
+          "params": [],
+          "exported": false,
+          "lineCount": 21
+        },
+        {
+          "name": "AppDatabase.deinit",
+          "params": [],
+          "exported": false,
+          "lineCount": 1
+        },
+        {
+          "name": "close",
+          "params": [],
+          "exported": false,
+          "lineCount": 5
+        },
+        {
+          "name": "read",
+          "params": [
+            "block"
+          ],
+          "returnType": "T",
+          "exported": true,
+          "lineCount": 9
+        },
+        {
+          "name": "write",
+          "params": [
+            "block"
+          ],
+          "returnType": "T",
+          "exported": true,
+          "lineCount": 16
+        },
+        {
+          "name": "execute",
+          "params": [
+            "sql"
+          ],
+          "exported": false,
+          "lineCount": 4
+        },
+        {
+          "name": "exec",
+          "params": [
+            "db",
+            "sql"
+          ],
+          "exported": false,
+          "lineCount": 5
+        },
+        {
+          "name": "runMigrations",
+          "params": [],
+          "exported": false,
+          "lineCount": 33
+        },
+        {
+          "name": "msg",
+          "params": [
+            "db"
+          ],
+          "returnType": "String",
+          "exported": false,
+          "lineCount": 3
+        }
+      ],
+      "classes": [
+        {
+          "name": "AppDatabase",
+          "methods": [
+            "init",
+            "openAndMigrate",
+            "deinit",
+            "close",
+            "read",
+            "write",
+            "execute",
+            "exec",
+            "runMigrations",
+            "msg"
+          ],
+          "properties": [
+            "db",
+            "databaseURL",
+            "queue",
+            "shared"
+          ],
+          "exported": true,
+          "lineCount": 121
+        },
+        {
+          "name": "DatabaseError",
+          "methods": [],
+          "properties": [
+            "openFailed",
+            "databaseClosed",
+            "sqlError",
+            "errorDescription"
+          ],
+          "exported": true,
+          "lineCount": 10
+        }
+      ],
+      "imports": [
+        {
+          "source": "Foundation",
+          "specifiers": [
+            "Foundation"
+          ]
+        },
+        {
+          "source": "SQLite3",
+          "specifiers": [
+            "SQLite3"
+          ]
+        }
+      ],
+      "exports": [
+        "AppDatabase.init",
+        "read",
+        "write",
+        "shared",
+        "AppDatabase",
+        "errorDescription",
+        "DatabaseError"
+      ],
+      "totalLines": 136,
+      "hasStructuralAnalysis": true
+    },
+    "kmb app/Persistence/RouteRepository.swift": {
+      "filePath": "kmb app/Persistence/RouteRepository.swift",
+      "contentHash": "619fc3651565ee94c297643173a60875418f42216b6f56d738b7041ef23d0641",
+      "functions": [
+        {
+          "name": "RouteRepository.init",
+          "params": [
+            "database"
+          ],
+          "exported": true,
+          "lineCount": 1
+        },
+        {
+          "name": "upsertRoutes",
+          "params": [
+            "routes"
+          ],
+          "exported": true,
+          "lineCount": 20
+        },
+        {
+          "name": "routesForOperator",
+          "params": [
+            "op"
+          ],
+          "returnType": "[BusRoute]",
+          "exported": true,
+          "lineCount": 12
+        },
+        {
+          "name": "routesAtStop",
+          "params": [
+            "op",
+            "stopId"
+          ],
+          "returnType": "[BusRoute]",
+          "exported": true,
+          "lineCount": 19
+        },
+        {
+          "name": "upsertAllRouteStops",
+          "params": [
+            "op",
+            "pairs"
+          ],
+          "exported": true,
+          "lineCount": 18
+        },
+        {
+          "name": "rowToRoute",
+          "params": [
+            "s"
+          ],
+          "returnType": "BusRoute",
+          "exported": false,
+          "lineCount": 15
+        }
+      ],
+      "classes": [
+        {
+          "name": "RouteRepository",
+          "methods": [
+            "init",
+            "upsertRoutes",
+            "routesForOperator",
+            "routesAtStop",
+            "upsertAllRouteStops",
+            "rowToRoute"
+          ],
+          "properties": [
+            "database",
+            "debugRowCount"
+          ],
+          "exported": true,
+          "lineCount": 96
+        }
+      ],
+      "imports": [
+        {
+          "source": "Foundation",
+          "specifiers": [
+            "Foundation"
+          ]
+        },
+        {
+          "source": "SQLite3",
+          "specifiers": [
+            "SQLite3"
+          ]
+        }
+      ],
+      "exports": [
+        "RouteRepository.init",
+        "upsertRoutes",
+        "routesForOperator",
+        "routesAtStop",
+        "upsertAllRouteStops",
+        "RouteRepository"
+      ],
+      "totalLines": 100,
+      "hasStructuralAnalysis": true
+    },
+    "kmb app/Persistence/StopRepository.swift": {
+      "filePath": "kmb app/Persistence/StopRepository.swift",
+      "contentHash": "7103e9da94992d570f4690e2dca27d1b3bb088245312a6ea51f6d0f2f4e7610c",
+      "functions": [
+        {
+          "name": "StopRepository.init",
+          "params": [
+            "database"
+          ],
+          "exported": true,
+          "lineCount": 1
+        },
+        {
+          "name": "upsertStops",
+          "params": [
+            "stops"
+          ],
+          "exported": true,
+          "lineCount": 21
+        },
+        {
+          "name": "stopsForOperator",
+          "params": [
+            "op"
+          ],
+          "returnType": "[BusStop]",
+          "exported": true,
+          "lineCount": 14
+        },
+        {
+          "name": "rowToStop",
+          "params": [
+            "s"
+          ],
+          "returnType": "BusStop",
+          "exported": false,
+          "lineCount": 11
+        }
+      ],
+      "classes": [
+        {
+          "name": "StopRepository",
+          "methods": [
+            "init",
+            "upsertStops",
+            "stopsForOperator",
+            "rowToStop"
+          ],
+          "properties": [
+            "database"
+          ],
+          "exported": true,
+          "lineCount": 54
+        }
+      ],
+      "imports": [
+        {
+          "source": "Foundation",
+          "specifiers": [
+            "Foundation"
+          ]
+        },
+        {
+          "source": "SQLite3",
+          "specifiers": [
+            "SQLite3"
+          ]
+        }
+      ],
+      "exports": [
+        "StopRepository.init",
+        "upsertStops",
+        "stopsForOperator",
+        "StopRepository"
+      ],
+      "totalLines": 58,
+      "hasStructuralAnalysis": true
+    },
+    "kmb app/Persistence/SyncMetaRepository.swift": {
+      "filePath": "kmb app/Persistence/SyncMetaRepository.swift",
+      "contentHash": "3a8521564346a3df6d211c931432032677d87036c4b90e03d9ddf9a80c66c3c4",
+      "functions": [
+        {
+          "name": "SyncMetaRepository.init",
+          "params": [
+            "database"
+          ],
+          "exported": true,
+          "lineCount": 1
+        },
+        {
+          "name": "lastSyncTimestamp",
+          "params": [
+            "key"
+          ],
+          "returnType": "Date?",
+          "exported": true,
+          "lineCount": 12
+        },
+        {
+          "name": "setSyncTimestamp",
+          "params": [
+            "date",
+            "key"
+          ],
+          "exported": true,
+          "lineCount": 12
+        }
+      ],
+      "classes": [
+        {
+          "name": "SyncMetaRepository",
+          "methods": [
+            "init",
+            "lastSyncTimestamp",
+            "setSyncTimestamp"
+          ],
+          "properties": [
+            "database"
+          ],
+          "exported": true,
+          "lineCount": 31
+        }
+      ],
+      "imports": [
+        {
+          "source": "Foundation",
+          "specifiers": [
+            "Foundation"
+          ]
+        },
+        {
+          "source": "SQLite3",
+          "specifiers": [
+            "SQLite3"
+          ]
+        }
+      ],
+      "exports": [
+        "SyncMetaRepository.init",
+        "lastSyncTimestamp",
+        "setSyncTimestamp",
+        "SyncMetaRepository"
+      ],
+      "totalLines": 35,
+      "hasStructuralAnalysis": true
+    },
+    "kmb app/Theme.swift": {
+      "filePath": "kmb app/Theme.swift",
+      "contentHash": "95f4638a53858dd490f78b602449cc0e77979986d90d66dd401e048751971ca4",
+      "functions": [
+        {
+          "name": "body",
+          "params": [
+            "content"
+          ],
+          "returnType": "some View",
+          "exported": true,
+          "lineCount": 5
+        },
+        {
+          "name": "navigationBarBackground",
+          "params": [],
+          "returnType": "some View",
+          "exported": true,
+          "lineCount": 3
+        },
+        {
+          "name": "UIColor.init",
+          "params": [
+            "bgHex"
+          ],
+          "exported": true,
+          "lineCount": 8
+        }
+      ],
+      "classes": [
+        {
+          "name": "BrutalTheme",
+          "methods": [],
+          "properties": [
+            "bg",
+            "surface",
+            "text",
+            "textSecondary",
+            "accent",
+            "border",
+            "borderWidth",
+            "cardBorderWidth",
+            "radius",
+            "shadowOffset",
+            "shadowPressedOffset"
+          ],
+          "exported": true,
+          "lineCount": 13
+        },
+        {
+          "name": "extension Font",
+          "methods": [],
+          "properties": [
+            "brutalBody",
+            "brutalSmall",
+            "brutalTitle",
+            "brutalNumber",
+            "brutalTab"
+          ],
+          "exported": false,
+          "lineCount": 7
+        },
+        {
+          "name": "extension Font",
+          "methods": [],
+          "properties": [
+            "brutalChineseBody",
+            "brutalChineseSmall",
+            "brutalChineseTitle"
+          ],
+          "exported": false,
+          "lineCount": 5
+        },
+        {
+          "name": "BrutalDivider",
+          "methods": [],
+          "properties": [
+            "body"
+          ],
+          "exported": true,
+          "lineCount": 7
+        },
+        {
+          "name": "NavigationBarBackground",
+          "methods": [
+            "body"
+          ],
+          "properties": [],
+          "exported": true,
+          "lineCount": 7
+        },
+        {
+          "name": "extension View",
+          "methods": [
+            "navigationBarBackground"
+          ],
+          "properties": [],
+          "exported": false,
+          "lineCount": 5
+        },
+        {
+          "name": "extension UIColor",
+          "methods": [
+            "init"
+          ],
+          "properties": [],
+          "exported": false,
+          "lineCount": 10
+        }
+      ],
+      "imports": [
+        {
+          "source": "SwiftUI",
+          "specifiers": [
+            "SwiftUI"
+          ]
+        }
+      ],
+      "exports": [
+        "bg",
+        "surface",
+        "text",
+        "textSecondary",
+        "accent",
+        "border",
+        "borderWidth",
+        "cardBorderWidth",
+        "radius",
+        "shadowOffset",
+        "shadowPressedOffset",
+        "BrutalTheme",
+        "brutalBody",
+        "brutalSmall",
+        "brutalTitle",
+        "brutalNumber",
+        "brutalTab",
+        "brutalChineseBody",
+        "brutalChineseSmall",
+        "brutalChineseTitle",
+        "body",
+        "BrutalDivider",
+        "body",
+        "NavigationBarBackground",
+        "navigationBarBackground",
+        "UIColor.init"
+      ],
+      "totalLines": 63,
+      "hasStructuralAnalysis": true
+    },
+    "kmb app/ViewModels/HomeViewModel.swift": {
+      "filePath": "kmb app/ViewModels/HomeViewModel.swift",
+      "contentHash": "b1668d9ddd3a54d417fb50cf42220eb3a2edd5436015287547037b568409a598",
+      "functions": [
+        {
+          "name": "HomeViewModel.init",
+          "params": [],
+          "exported": true,
+          "lineCount": 8
+        },
+        {
+          "name": "start",
+          "params": [],
+          "exported": true,
+          "lineCount": 4
+        },
+        {
+          "name": "requestPermission",
+          "params": [],
+          "exported": true,
+          "lineCount": 4
+        },
+        {
+          "name": "useWithoutLocation",
+          "params": [],
+          "exported": true,
+          "lineCount": 5
+        },
+        {
+          "name": "locationManagerDidChangeAuthorization",
+          "params": [
+            "manager"
+          ],
+          "exported": true,
+          "lineCount": 13
+        },
+        {
+          "name": "locationManager",
+          "params": [
+            "manager",
+            "locations"
+          ],
+          "exported": true,
+          "lineCount": 5
+        },
+        {
+          "name": "locationManager",
+          "params": [
+            "manager",
+            "error"
+          ],
+          "exported": true,
+          "lineCount": 3
+        },
+        {
+          "name": "syncIfNeeded",
+          "params": [],
+          "exported": false,
+          "lineCount": 38
+        },
+        {
+          "name": "refreshStops",
+          "params": [],
+          "exported": true,
+          "lineCount": 32
+        },
+        {
+          "name": "fetchETAsForNearbyStops",
+          "params": [],
+          "exported": false,
+          "lineCount": 21
+        },
+        {
+          "name": "etaPollingLoop",
+          "params": [],
+          "exported": true,
+          "lineCount": 6
+        },
+        {
+          "name": "haversine",
+          "params": [
+            "from",
+            "to"
+          ],
+          "returnType": "Double",
+          "exported": false,
+          "lineCount": 10
+        }
+      ],
+      "classes": [
+        {
+          "name": "HomeViewModel",
+          "methods": [
+            "init",
+            "start",
+            "requestPermission",
+            "useWithoutLocation",
+            "locationManagerDidChangeAuthorization",
+            "locationManager",
+            "locationManager",
+            "syncIfNeeded",
+            "refreshStops",
+            "fetchETAsForNearbyStops",
+            "etaPollingLoop"
+          ],
+          "properties": [
+            "nearbyStops",
+            "isLoading",
+            "errorMessage",
+            "isSyncing",
+            "syncError",
+            "showPermissionPrompt",
+            "locationPermissionDenied",
+            "database",
+            "stopRepo",
+            "client",
+            "decoder",
+            "locationManager",
+            "fallbackLocation"
+          ],
+          "exported": true,
+          "lineCount": 184
+        },
+        {
+          "name": "StopWithETA",
+          "methods": [],
+          "properties": [
+            "id",
+            "stop",
+            "distance",
+            "etas",
+            "displayName",
+            "distanceDisplay"
+          ],
+          "exported": true,
+          "lineCount": 14
+        }
+      ],
+      "imports": [
+        {
+          "source": "Foundation",
+          "specifiers": [
+            "Foundation"
+          ]
+        },
+        {
+          "source": "Observation",
+          "specifiers": [
+            "Observation"
+          ]
+        },
+        {
+          "source": "CoreLocation",
+          "specifiers": [
+            "CoreLocation"
+          ]
+        }
+      ],
+      "exports": [
+        "nearbyStops",
+        "isLoading",
+        "errorMessage",
+        "isSyncing",
+        "syncError",
+        "showPermissionPrompt",
+        "locationPermissionDenied",
+        "HomeViewModel.init",
+        "start",
+        "requestPermission",
+        "useWithoutLocation",
+        "locationManagerDidChangeAuthorization",
+        "locationManager",
+        "locationManager",
+        "refreshStops",
+        "etaPollingLoop",
+        "HomeViewModel",
+        "id",
+        "stop",
+        "distance",
+        "etas",
+        "displayName",
+        "distanceDisplay",
+        "StopWithETA"
+      ],
+      "totalLines": 200,
+      "hasStructuralAnalysis": true
+    },
+    "kmb app/ViewModels/RouteDetailViewModel.swift": {
+      "filePath": "kmb app/ViewModels/RouteDetailViewModel.swift",
+      "contentHash": "76ef70d7a1fa4742f7d8da11c9774eb91b0c64d8735d93f55f943b18cb55e582",
+      "functions": [
+        {
+          "name": "RouteDetailViewModel.init",
+          "params": [
+            "route"
+          ],
+          "exported": true,
+          "lineCount": 3
+        },
+        {
+          "name": "load",
+          "params": [],
+          "exported": true,
+          "lineCount": 32
+        },
+        {
+          "name": "loadRoutePolyline",
+          "params": [],
+          "exported": false,
+          "lineCount": 41
+        },
+        {
+          "name": "routeSegment",
+          "params": [
+            "from",
+            "to"
+          ],
+          "returnType": "[CLLocationCoordinate2D]",
+          "exported": false,
+          "lineCount": 22
+        },
+        {
+          "name": "distance",
+          "params": [
+            "a",
+            "b"
+          ],
+          "returnType": "CLLocationDistance",
+          "exported": false,
+          "lineCount": 5
+        },
+        {
+          "name": "selectStop",
+          "params": [
+            "seq"
+          ],
+          "exported": true,
+          "lineCount": 16
+        },
+        {
+          "name": "toggleStop",
+          "params": [
+            "seq"
+          ],
+          "exported": true,
+          "lineCount": 41
+        },
+        {
+          "name": "fetchFilteredRouteStops",
+          "params": [],
+          "returnType": "[(seq: Int, stopId: String)]",
+          "exported": false,
+          "lineCount": 11
+        },
+        {
+          "name": "buildStopLookup",
+          "params": [],
+          "returnType": "[String: BusStop]",
+          "exported": false,
+          "lineCount": 15
+        }
+      ],
+      "classes": [
+        {
+          "name": "RouteDetailViewModel",
+          "methods": [
+            "init",
+            "load",
+            "loadRoutePolyline",
+            "routeSegment",
+            "distance",
+            "selectStop",
+            "toggleStop",
+            "fetchFilteredRouteStops",
+            "buildStopLookup"
+          ],
+          "properties": [
+            "route",
+            "stopDetails",
+            "expandedSeq",
+            "polylineCoords",
+            "isLoading",
+            "errorMessage",
+            "mapPosition",
+            "client",
+            "decoder"
+          ],
+          "exported": true,
+          "lineCount": 225
+        },
+        {
+          "name": "StopDetail",
+          "methods": [],
+          "properties": [
+            "id",
+            "seq",
+            "stopId",
+            "nameEn",
+            "nameTc",
+            "nameSc",
+            "coordinate",
+            "etas",
+            "displayName"
+          ],
+          "exported": true,
+          "lineCount": 14
+        },
+        {
+          "name": "extension MKPolyline",
+          "methods": [],
+          "properties": [
+            "coordinates"
+          ],
+          "exported": false,
+          "lineCount": 7
+        }
+      ],
+      "imports": [
+        {
+          "source": "SwiftUI",
+          "specifiers": [
+            "SwiftUI"
+          ]
+        },
+        {
+          "source": "Observation",
+          "specifiers": [
+            "Observation"
+          ]
+        },
+        {
+          "source": "CoreLocation",
+          "specifiers": [
+            "CoreLocation"
+          ]
+        },
+        {
+          "source": "MapKit",
+          "specifiers": [
+            "MapKit"
+          ]
+        }
+      ],
+      "exports": [
+        "route",
+        "stopDetails",
+        "expandedSeq",
+        "polylineCoords",
+        "isLoading",
+        "errorMessage",
+        "mapPosition",
+        "RouteDetailViewModel.init",
+        "load",
+        "selectStop",
+        "toggleStop",
+        "RouteDetailViewModel",
+        "id",
+        "seq",
+        "stopId",
+        "nameEn",
+        "nameTc",
+        "nameSc",
+        "coordinate",
+        "etas",
+        "displayName",
+        "StopDetail",
+        "coordinates"
+      ],
+      "totalLines": 239,
+      "hasStructuralAnalysis": true
+    },
+    "kmb app/ViewModels/SearchViewModel.swift": {
+      "filePath": "kmb app/ViewModels/SearchViewModel.swift",
+      "contentHash": "0a4415ec8c3e0e54bb5faaa0e27252db61f1ae4732d80c1b0fbe66795682fa3f",
+      "functions": [
+        {
+          "name": "SearchViewModel.init",
+          "params": [],
+          "exported": true,
+          "lineCount": 1
+        },
+        {
+          "name": "loadRoutesFromDB",
+          "params": [],
+          "exported": true,
+          "lineCount": 13
+        },
+        {
+          "name": "fetchFromAPI",
+          "params": [],
+          "exported": false,
+          "lineCount": 15
+        },
+        {
+          "name": "appendDigit",
+          "params": [
+            "digit"
+          ],
+          "exported": true,
+          "lineCount": 4
+        },
+        {
+          "name": "appendLetter",
+          "params": [
+            "letter"
+          ],
+          "exported": true,
+          "lineCount": 4
+        },
+        {
+          "name": "backspace",
+          "params": [],
+          "exported": true,
+          "lineCount": 5
+        },
+        {
+          "name": "clearAll",
+          "params": [],
+          "exported": true,
+          "lineCount": 4
+        },
+        {
+          "name": "search",
+          "params": [],
+          "exported": false,
+          "lineCount": 16
+        }
+      ],
+      "classes": [
+        {
+          "name": "SearchViewModel",
+          "methods": [
+            "init",
+            "loadRoutesFromDB",
+            "fetchFromAPI",
+            "appendDigit",
+            "appendLetter",
+            "backspace",
+            "clearAll",
+            "search"
+          ],
+          "properties": [
+            "inputText",
+            "searchResults",
+            "allRoutes",
+            "isLoadingRoutes",
+            "loadTask",
+            "numericKeys",
+            "letterKeys"
+          ],
+          "exported": true,
+          "lineCount": 97
+        }
+      ],
+      "imports": [
+        {
+          "source": "SwiftUI",
+          "specifiers": [
+            "SwiftUI"
+          ]
+        },
+        {
+          "source": "Observation",
+          "specifiers": [
+            "Observation"
+          ]
+        }
+      ],
+      "exports": [
+        "inputText",
+        "searchResults",
+        "allRoutes",
+        "isLoadingRoutes",
+        "numericKeys",
+        "letterKeys",
+        "SearchViewModel.init",
+        "loadRoutesFromDB",
+        "appendDigit",
+        "appendLetter",
+        "backspace",
+        "clearAll",
+        "SearchViewModel"
+      ],
+      "totalLines": 101,
+      "hasStructuralAnalysis": true
+    },
+    "kmb app/Views/HomeView.swift": {
+      "filePath": "kmb app/Views/HomeView.swift",
+      "contentHash": "ecbfe1f1b112a8eedb3a7d40bf9a7a0c6b40a44719312dbdd6e5e7ffe4cc8f3e",
+      "functions": [],
+      "classes": [
+        {
+          "name": "HomeView",
+          "methods": [],
+          "properties": [
+            "viewModel",
+            "body"
+          ],
+          "exported": true,
+          "lineCount": 138
+        },
+        {
+          "name": "HomeETALabel",
+          "methods": [],
+          "properties": [
+            "eta",
+            "body"
+          ],
+          "exported": true,
+          "lineCount": 16
+        }
+      ],
+      "imports": [
+        {
+          "source": "SwiftUI",
+          "specifiers": [
+            "SwiftUI"
+          ]
+        }
+      ],
+      "exports": [
+        "body",
+        "HomeView",
+        "eta",
+        "body",
+        "HomeETALabel"
+      ],
+      "totalLines": 158,
+      "hasStructuralAnalysis": true
+    },
+    "kmb app/Views/LanguageHelper.swift": {
+      "filePath": "kmb app/Views/LanguageHelper.swift",
+      "contentHash": "f5083b710ef771be5fa398a5e4db934ef483dcf334e1f0b395243a19d3ea44fe",
+      "functions": [
+        {
+          "name": "set",
+          "params": [
+            "language"
+          ],
+          "exported": true,
+          "lineCount": 3
+        },
+        {
+          "name": "stopName",
+          "params": [
+            "en",
+            "tc",
+            "sc"
+          ],
+          "returnType": "String",
+          "exported": true,
+          "lineCount": 3
+        },
+        {
+          "name": "routeDest",
+          "params": [
+            "en",
+            "tc",
+            "sc"
+          ],
+          "returnType": "String",
+          "exported": true,
+          "lineCount": 3
+        },
+        {
+          "name": "remark",
+          "params": [
+            "en",
+            "tc",
+            "sc"
+          ],
+          "returnType": "String?",
+          "exported": true,
+          "lineCount": 4
+        }
+      ],
+      "classes": [
+        {
+          "name": "AppLanguage",
+          "methods": [],
+          "properties": [
+            "english",
+            "traditionalChinese",
+            "label"
+          ],
+          "exported": true,
+          "lineCount": 11
+        },
+        {
+          "name": "LanguageHelper",
+          "methods": [
+            "set",
+            "stopName",
+            "routeDest",
+            "remark"
+          ],
+          "properties": [
+            "storedLanguage",
+            "current"
+          ],
+          "exported": true,
+          "lineCount": 24
+        }
+      ],
+      "imports": [
+        {
+          "source": "SwiftUI",
+          "specifiers": [
+            "SwiftUI"
+          ]
+        }
+      ],
+      "exports": [
+        "label",
+        "AppLanguage",
+        "current",
+        "set",
+        "stopName",
+        "routeDest",
+        "remark",
+        "LanguageHelper"
+      ],
+      "totalLines": 39,
+      "hasStructuralAnalysis": true
+    },
+    "kmb app/Views/RouteDetailView.swift": {
+      "filePath": "kmb app/Views/RouteDetailView.swift",
+      "contentHash": "e59a650383575a30923592bc6006ddf5357bf665571a2b5aaa633f189c794405",
+      "functions": [
+        {
+          "name": "RouteDetailView.init",
+          "params": [
+            "route"
+          ],
+          "exported": true,
+          "lineCount": 4
+        }
+      ],
+      "classes": [
+        {
+          "name": "RouteDetailView",
+          "methods": [
+            "init"
+          ],
+          "properties": [
+            "route",
+            "viewModel",
+            "body",
+            "routeMap",
+            "stopList"
+          ],
+          "exported": true,
+          "lineCount": 97
+        },
+        {
+          "name": "BrutalStopMarker",
+          "methods": [],
+          "properties": [
+            "seq",
+            "isSelected",
+            "markerGrey",
+            "body"
+          ],
+          "exported": true,
+          "lineCount": 15
+        },
+        {
+          "name": "BrutalStopRow",
+          "methods": [],
+          "properties": [
+            "stop",
+            "isExpanded",
+            "onTap",
+            "body"
+          ],
+          "exported": true,
+          "lineCount": 83
+        }
+      ],
+      "imports": [
+        {
+          "source": "SwiftUI",
+          "specifiers": [
+            "SwiftUI"
+          ]
+        },
+        {
+          "source": "MapKit",
+          "specifiers": [
+            "MapKit"
+          ]
+        }
+      ],
+      "exports": [
+        "route",
+        "RouteDetailView.init",
+        "body",
+        "RouteDetailView",
+        "seq",
+        "isSelected",
+        "body",
+        "BrutalStopMarker",
+        "stop",
+        "isExpanded",
+        "onTap",
+        "body",
+        "BrutalStopRow"
+      ],
+      "totalLines": 201,
+      "hasStructuralAnalysis": true
+    },
+    "kmb app/Views/SearchView.swift": {
+      "filePath": "kmb app/Views/SearchView.swift",
+      "contentHash": "10e728c401c0026496751a738027b789cb848de2f2a6f2c6bbc4d3cdbc586516",
+      "functions": [],
+      "classes": [
+        {
+          "name": "SearchView",
+          "methods": [],
+          "properties": [
+            "viewModel",
+            "body",
+            "inputDisplay",
+            "resultsArea",
+            "keypad",
+            "numericKeypad",
+            "letterKeypad"
+          ],
+          "exported": true,
+          "lineCount": 166
+        },
+        {
+          "name": "BrutalKeyButton",
+          "methods": [],
+          "properties": [
+            "label",
+            "font",
+            "action",
+            "body"
+          ],
+          "exported": true,
+          "lineCount": 19
+        }
+      ],
+      "imports": [
+        {
+          "source": "SwiftUI",
+          "specifiers": [
+            "SwiftUI"
+          ]
+        }
+      ],
+      "exports": [
+        "body",
+        "SearchView",
+        "label",
+        "font",
+        "action",
+        "body",
+        "BrutalKeyButton"
+      ],
+      "totalLines": 189,
+      "hasStructuralAnalysis": true
+    },
+    "kmb app/Views/SettingsView.swift": {
+      "filePath": "kmb app/Views/SettingsView.swift",
+      "contentHash": "c841c562cdbad647ade6cd616ef4c1c0d0171515e878915fa741017166812311",
+      "functions": [],
+      "classes": [
+        {
+          "name": "SettingsView",
+          "methods": [],
+          "properties": [
+            "language",
+            "body"
+          ],
+          "exported": true,
+          "lineCount": 40
+        }
+      ],
+      "imports": [
+        {
+          "source": "SwiftUI",
+          "specifiers": [
+            "SwiftUI"
+          ]
+        }
+      ],
+      "exports": [
+        "body",
+        "SettingsView"
+      ],
+      "totalLines": 43,
+      "hasStructuralAnalysis": true
+    },
+    "kmb app/kmb_appApp.swift": {
+      "filePath": "kmb app/kmb_appApp.swift",
+      "contentHash": "e43b922b15f7facf7c89c84f423cfd8879db1d401f721cb7b6d8ac0fdede9e22",
+      "functions": [
+        {
+          "name": "kmb_appApp.init",
+          "params": [],
+          "exported": true,
+          "lineCount": 3
+        },
+        {
+          "name": "applyBrutalistTheme",
+          "params": [],
+          "exported": false,
+          "lineCount": 20
+        }
+      ],
+      "classes": [
+        {
+          "name": "kmb_appApp",
+          "methods": [
+            "init",
+            "applyBrutalistTheme"
+          ],
+          "properties": [
+            "body"
+          ],
+          "exported": true,
+          "lineCount": 36
+        },
+        {
+          "name": "ContentView",
+          "methods": [],
+          "properties": [
+            "selectedTab",
+            "body"
+          ],
+          "exported": true,
+          "lineCount": 14
+        },
+        {
+          "name": "TabBar",
+          "methods": [],
+          "properties": [
+            "selectedTab",
+            "body"
+          ],
+          "exported": true,
+          "lineCount": 29
+        },
+        {
+          "name": "TabContentView",
+          "methods": [],
+          "properties": [
+            "selectedTab",
+            "body"
+          ],
+          "exported": true,
+          "lineCount": 14
+        },
+        {
+          "name": "TabBarButton",
+          "methods": [],
+          "properties": [
+            "label",
+            "icon",
+            "isSelected",
+            "action",
+            "body"
+          ],
+          "exported": true,
+          "lineCount": 21
+        }
+      ],
+      "imports": [
+        {
+          "source": "SwiftUI",
+          "specifiers": [
+            "SwiftUI"
+          ]
+        }
+      ],
+      "exports": [
+        "kmb_appApp.init",
+        "body",
+        "kmb_appApp",
+        "body",
+        "ContentView",
+        "selectedTab",
+        "body",
+        "TabBar",
+        "selectedTab",
+        "body",
+        "TabContentView",
+        "label",
+        "icon",
+        "isSelected",
+        "action",
+        "body",
+        "TabBarButton"
+      ],
+      "totalLines": 121,
+      "hasStructuralAnalysis": true
+    },
+    "kmb appTests/kmb_appTests.swift": {
+      "filePath": "kmb appTests/kmb_appTests.swift",
+      "contentHash": "730ea065cef66f0a944b41f3ea2ac9df1ad7be88fec1d10858ad3c588da6dd5e",
+      "functions": [
+        {
+          "name": "example",
+          "params": [],
+          "exported": true,
+          "lineCount": 5
+        }
+      ],
+      "classes": [
+        {
+          "name": "kmb_appTests",
+          "methods": [
+            "example"
+          ],
+          "properties": [],
+          "exported": true,
+          "lineCount": 9
+        }
+      ],
+      "imports": [
+        {
+          "source": "Testing",
+          "specifiers": [
+            "Testing"
+          ]
+        },
+        {
+          "source": "kmb_app",
+          "specifiers": [
+            "kmb_app"
+          ]
+        }
+      ],
+      "exports": [
+        "example",
+        "kmb_appTests"
+      ],
+      "totalLines": 20,
+      "hasStructuralAnalysis": true
+    },
+    "kmb appUITests/kmb_appUITests.swift": {
+      "filePath": "kmb appUITests/kmb_appUITests.swift",
+      "contentHash": "9d8359bd77a282c22c7e4aba01bbd7c25ac824d6420cc0fd3df3fa058e144953",
+      "functions": [
+        {
+          "name": "setUpWithError",
+          "params": [],
+          "exported": true,
+          "lineCount": 8
+        },
+        {
+          "name": "tearDownWithError",
+          "params": [],
+          "exported": true,
+          "lineCount": 3
+        },
+        {
+          "name": "testExample",
+          "params": [],
+          "exported": true,
+          "lineCount": 10
+        },
+        {
+          "name": "testLaunchPerformance",
+          "params": [],
+          "exported": true,
+          "lineCount": 7
+        }
+      ],
+      "classes": [
+        {
+          "name": "kmb_appUITests",
+          "methods": [
+            "setUpWithError",
+            "tearDownWithError",
+            "testExample",
+            "testLaunchPerformance"
+          ],
+          "properties": [],
+          "exported": true,
+          "lineCount": 34
+        }
+      ],
+      "imports": [
+        {
+          "source": "XCTest",
+          "specifiers": [
+            "XCTest"
+          ]
+        }
+      ],
+      "exports": [
+        "setUpWithError",
+        "tearDownWithError",
+        "testExample",
+        "testLaunchPerformance",
+        "kmb_appUITests"
+      ],
+      "totalLines": 44,
+      "hasStructuralAnalysis": true
+    },
+    "kmb appUITests/kmb_appUITestsLaunchTests.swift": {
+      "filePath": "kmb appUITests/kmb_appUITestsLaunchTests.swift",
+      "contentHash": "5d6185fac14bb7951a2e0d382bb62100382de08750a675d8870619332411c6ed",
+      "functions": [
+        {
+          "name": "setUpWithError",
+          "params": [],
+          "exported": true,
+          "lineCount": 3
+        },
+        {
+          "name": "testLaunch",
+          "params": [],
+          "exported": true,
+          "lineCount": 15
+        }
+      ],
+      "classes": [
+        {
+          "name": "kmb_appUITestsLaunchTests",
+          "methods": [
+            "setUpWithError",
+            "testLaunch"
+          ],
+          "properties": [
+            "runsForEachTargetApplicationUIConfiguration"
+          ],
+          "exported": true,
+          "lineCount": 26
+        }
+      ],
+      "imports": [
+        {
+          "source": "XCTest",
+          "specifiers": [
+            "XCTest"
+          ]
+        }
+      ],
+      "exports": [
+        "runsForEachTargetApplicationUIConfiguration",
+        "setUpWithError",
+        "testLaunch",
+        "kmb_appUITestsLaunchTests"
+      ],
+      "totalLines": 36,
+      "hasStructuralAnalysis": true
+    }
+  }
+}

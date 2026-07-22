@@ -1,0 +1,633 @@
+{
+  "schemaVersion": 1,
+  "algorithm": "louvain",
+  "totalFiles": 38,
+  "totalBatches": 3,
+  "exportsByPath": {
+    "kmb app.xcodeproj/project.pbxproj": [],
+    "kmb app.xcodeproj/project.xcworkspace/contents.xcworkspacedata": [],
+    "kmb app.xcodeproj/project.xcworkspace/xcshareddata/WorkspaceSettings.xcsettings": [],
+    "kmb app.xcodeproj/project.xcworkspace/xcuserdata/j__tin.xcuserdatad/WorkspaceSettings.xcsettings": [],
+    "kmb app/Color+App.swift": [
+      "kmbRed"
+    ],
+    "kmb app/Models/ArrivalETA.swift": [
+      "id",
+      "operatorType",
+      "routeCode",
+      "stopId",
+      "destEn",
+      "destTc",
+      "destSc",
+      "remarkEn",
+      "remarkTc",
+      "remarkSc",
+      "etaSeq",
+      "etaTime",
+      "minutesAwayOverride",
+      "minutesAway",
+      "destinationDisplay",
+      "remarkDisplay",
+      "ArrivalETA"
+    ],
+    "kmb app/Models/BusOperator.swift": [
+      "BusOperator"
+    ],
+    "kmb app/Models/BusRoute.swift": [
+      "id",
+      "operatorType",
+      "routeCode",
+      "bound",
+      "serviceType",
+      "region",
+      "originEn",
+      "originTc",
+      "originSc",
+      "destEn",
+      "destTc",
+      "destSc",
+      "dataTimestamp",
+      "displayLabel",
+      "BusRoute"
+    ],
+    "kmb app/Models/BusStop.swift": [
+      "id",
+      "operatorType",
+      "rawStopId",
+      "nameEn",
+      "nameTc",
+      "nameSc",
+      "latitude",
+      "longitude",
+      "region",
+      "dataTimestamp",
+      "coordinate",
+      "BusStop"
+    ],
+    "kmb app/Network/KMBAPIClient.swift": [
+      "KMBAPIClient.init",
+      "fetchRoutes",
+      "fetchStops",
+      "fetchRouteStops",
+      "fetchStopETA",
+      "fetchRouteETA",
+      "KMBAPIClient",
+      "errorDescription",
+      "KMBError"
+    ],
+    "kmb app/Network/KMBDataTypes.swift": [
+      "data",
+      "KMBResponse",
+      "route",
+      "bound",
+      "serviceType",
+      "origEn",
+      "origTc",
+      "origSc",
+      "destEn",
+      "destTc",
+      "destSc",
+      "KMBRouteData",
+      "CodingKeys",
+      "stop",
+      "nameEn",
+      "nameTc",
+      "nameSc",
+      "lat",
+      "long",
+      "KMBStopData",
+      "CodingKeys",
+      "route",
+      "bound",
+      "serviceType",
+      "seq",
+      "stop",
+      "KMBRouteStopData",
+      "CodingKeys",
+      "route",
+      "dir",
+      "destEn",
+      "destTc",
+      "destSc",
+      "etaSeq",
+      "eta",
+      "rmkEn",
+      "rmkTc",
+      "rmkSc",
+      "KMBETAData",
+      "CodingKeys",
+      "route",
+      "dir",
+      "serviceType",
+      "seq",
+      "destEn",
+      "destTc",
+      "destSc",
+      "etaSeq",
+      "eta",
+      "rmkEn",
+      "rmkTc",
+      "rmkSc",
+      "KMBRouteETAData",
+      "CodingKeys"
+    ],
+    "kmb app/Persistence/AppDatabase.swift": [
+      "AppDatabase.init",
+      "read",
+      "write",
+      "shared",
+      "AppDatabase",
+      "errorDescription",
+      "DatabaseError"
+    ],
+    "kmb app/Persistence/RouteRepository.swift": [
+      "RouteRepository.init",
+      "upsertRoutes",
+      "routesForOperator",
+      "routesAtStop",
+      "upsertAllRouteStops",
+      "RouteRepository"
+    ],
+    "kmb app/Persistence/StopRepository.swift": [
+      "StopRepository.init",
+      "upsertStops",
+      "stopsForOperator",
+      "StopRepository"
+    ],
+    "kmb app/Persistence/SyncMetaRepository.swift": [
+      "SyncMetaRepository.init",
+      "lastSyncTimestamp",
+      "setSyncTimestamp",
+      "SyncMetaRepository"
+    ],
+    "kmb app/Theme.swift": [
+      "bg",
+      "surface",
+      "text",
+      "textSecondary",
+      "accent",
+      "border",
+      "borderWidth",
+      "cardBorderWidth",
+      "radius",
+      "shadowOffset",
+      "shadowPressedOffset",
+      "BrutalTheme",
+      "brutalBody",
+      "brutalSmall",
+      "brutalTitle",
+      "brutalNumber",
+      "brutalTab",
+      "brutalChineseBody",
+      "brutalChineseSmall",
+      "brutalChineseTitle",
+      "body",
+      "BrutalDivider",
+      "body",
+      "NavigationBarBackground",
+      "navigationBarBackground",
+      "UIColor.init"
+    ],
+    "kmb app/ViewModels/HomeViewModel.swift": [
+      "nearbyStops",
+      "isLoading",
+      "errorMessage",
+      "isSyncing",
+      "syncError",
+      "showPermissionPrompt",
+      "locationPermissionDenied",
+      "HomeViewModel.init",
+      "start",
+      "requestPermission",
+      "useWithoutLocation",
+      "locationManagerDidChangeAuthorization",
+      "locationManager",
+      "locationManager",
+      "refreshStops",
+      "etaPollingLoop",
+      "HomeViewModel",
+      "id",
+      "stop",
+      "distance",
+      "etas",
+      "displayName",
+      "distanceDisplay",
+      "StopWithETA"
+    ],
+    "kmb app/ViewModels/RouteDetailViewModel.swift": [
+      "route",
+      "stopDetails",
+      "expandedSeq",
+      "polylineCoords",
+      "isLoading",
+      "errorMessage",
+      "mapPosition",
+      "RouteDetailViewModel.init",
+      "load",
+      "selectStop",
+      "toggleStop",
+      "RouteDetailViewModel",
+      "id",
+      "seq",
+      "stopId",
+      "nameEn",
+      "nameTc",
+      "nameSc",
+      "coordinate",
+      "etas",
+      "displayName",
+      "StopDetail",
+      "coordinates"
+    ],
+    "kmb app/ViewModels/SearchViewModel.swift": [
+      "inputText",
+      "searchResults",
+      "allRoutes",
+      "isLoadingRoutes",
+      "numericKeys",
+      "letterKeys",
+      "SearchViewModel.init",
+      "loadRoutesFromDB",
+      "appendDigit",
+      "appendLetter",
+      "backspace",
+      "clearAll",
+      "SearchViewModel"
+    ],
+    "kmb app/Views/HomeView.swift": [
+      "body",
+      "HomeView",
+      "eta",
+      "body",
+      "HomeETALabel"
+    ],
+    "kmb app/Views/LanguageHelper.swift": [
+      "label",
+      "AppLanguage",
+      "current",
+      "set",
+      "stopName",
+      "routeDest",
+      "remark",
+      "LanguageHelper"
+    ],
+    "kmb app/Views/RouteDetailView.swift": [
+      "route",
+      "RouteDetailView.init",
+      "body",
+      "RouteDetailView",
+      "seq",
+      "isSelected",
+      "body",
+      "BrutalStopMarker",
+      "stop",
+      "isExpanded",
+      "onTap",
+      "body",
+      "BrutalStopRow"
+    ],
+    "kmb app/Views/SearchView.swift": [
+      "body",
+      "SearchView",
+      "label",
+      "font",
+      "action",
+      "body",
+      "BrutalKeyButton"
+    ],
+    "kmb app/Views/SettingsView.swift": [
+      "body",
+      "SettingsView"
+    ],
+    "kmb app/kmb_appApp.swift": [
+      "kmb_appApp.init",
+      "body",
+      "kmb_appApp",
+      "body",
+      "ContentView",
+      "selectedTab",
+      "body",
+      "TabBar",
+      "selectedTab",
+      "body",
+      "TabContentView",
+      "label",
+      "icon",
+      "isSelected",
+      "action",
+      "body",
+      "TabBarButton"
+    ],
+    "kmb app/service docs/.~lock.KMB_ETA_iOS_App_PRD_v0.3.md#": [],
+    "kmb app/service docs/.~lock.KMB_ETA_iOS_App_TRD_v0.3.md#": [],
+    "kmb appTests/kmb_appTests.swift": [
+      "example",
+      "kmb_appTests"
+    ],
+    "kmb appUITests/kmb_appUITests.swift": [
+      "setUpWithError",
+      "tearDownWithError",
+      "testExample",
+      "testLaunchPerformance",
+      "kmb_appUITests"
+    ],
+    "kmb appUITests/kmb_appUITestsLaunchTests.swift": [
+      "runsForEachTargetApplicationUIConfiguration",
+      "setUpWithError",
+      "testLaunch",
+      "kmb_appUITestsLaunchTests"
+    ]
+  },
+  "batches": [
+    {
+      "batchIndex": 1,
+      "files": [
+        {
+          "path": "kmb app/service docs/KMB_ETA_iOS_App_PRD_v0.3.md",
+          "language": "markdown",
+          "sizeLines": 137,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "kmb app/service docs/KMB_ETA_iOS_App_TRD_v0.3.md",
+          "language": "markdown",
+          "sizeLines": 391,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "kmb app/service docs/VERSION_HISTORY.md",
+          "language": "markdown",
+          "sizeLines": 346,
+          "fileCategory": "docs"
+        }
+      ],
+      "batchImportData": {
+        "kmb app/service docs/KMB_ETA_iOS_App_PRD_v0.3.md": [],
+        "kmb app/service docs/KMB_ETA_iOS_App_TRD_v0.3.md": [],
+        "kmb app/service docs/VERSION_HISTORY.md": []
+      },
+      "neighborMap": {}
+    },
+    {
+      "batchIndex": 2,
+      "files": [
+        {
+          "path": "AGENTS.md",
+          "language": "markdown",
+          "sizeLines": 42,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "kmb app.xcodeproj/project.pbxproj",
+          "language": "pbxproj",
+          "sizeLines": 585,
+          "fileCategory": "code"
+        },
+        {
+          "path": "kmb app.xcodeproj/project.xcworkspace/contents.xcworkspacedata",
+          "language": "xcworkspacedata",
+          "sizeLines": 7,
+          "fileCategory": "code"
+        },
+        {
+          "path": "kmb app.xcodeproj/project.xcworkspace/xcshareddata/WorkspaceSettings.xcsettings",
+          "language": "xcsettings",
+          "sizeLines": 5,
+          "fileCategory": "code"
+        },
+        {
+          "path": "kmb app.xcodeproj/project.xcworkspace/xcuserdata/j__tin.xcuserdatad/WorkspaceSettings.xcsettings",
+          "language": "xcsettings",
+          "sizeLines": 16,
+          "fileCategory": "code"
+        },
+        {
+          "path": "kmb app.xcodeproj/xcuserdata/j__tin.xcuserdatad/xcschemes/xcschememanagement.plist",
+          "language": "xml",
+          "sizeLines": 14,
+          "fileCategory": "config"
+        },
+        {
+          "path": "kmb app/Assets.xcassets/AccentColor.colorset/Contents.json",
+          "language": "json",
+          "sizeLines": 11,
+          "fileCategory": "config"
+        },
+        {
+          "path": "kmb app/Assets.xcassets/AppIcon.appiconset/Contents.json",
+          "language": "json",
+          "sizeLines": 38,
+          "fileCategory": "config"
+        },
+        {
+          "path": "kmb app/Assets.xcassets/Contents.json",
+          "language": "json",
+          "sizeLines": 6,
+          "fileCategory": "config"
+        },
+        {
+          "path": "kmb app/Color+App.swift",
+          "language": "swift",
+          "sizeLines": 5,
+          "fileCategory": "code"
+        },
+        {
+          "path": "kmb app/Models/ArrivalETA.swift",
+          "language": "swift",
+          "sizeLines": 32,
+          "fileCategory": "code"
+        },
+        {
+          "path": "kmb app/Models/BusOperator.swift",
+          "language": "swift",
+          "sizeLines": 5,
+          "fileCategory": "code"
+        },
+        {
+          "path": "kmb app/Models/BusRoute.swift",
+          "language": "swift",
+          "sizeLines": 22,
+          "fileCategory": "code"
+        },
+        {
+          "path": "kmb app/Models/BusStop.swift",
+          "language": "swift",
+          "sizeLines": 19,
+          "fileCategory": "code"
+        },
+        {
+          "path": "kmb app/Network/KMBAPIClient.swift",
+          "language": "swift",
+          "sizeLines": 73,
+          "fileCategory": "code"
+        },
+        {
+          "path": "kmb app/Network/KMBDataTypes.swift",
+          "language": "swift",
+          "sizeLines": 113,
+          "fileCategory": "code"
+        },
+        {
+          "path": "kmb app/Persistence/AppDatabase.swift",
+          "language": "swift",
+          "sizeLines": 135,
+          "fileCategory": "code"
+        },
+        {
+          "path": "kmb app/Persistence/RouteRepository.swift",
+          "language": "swift",
+          "sizeLines": 99,
+          "fileCategory": "code"
+        },
+        {
+          "path": "kmb app/Persistence/StopRepository.swift",
+          "language": "swift",
+          "sizeLines": 57,
+          "fileCategory": "code"
+        },
+        {
+          "path": "kmb app/Persistence/SyncMetaRepository.swift",
+          "language": "swift",
+          "sizeLines": 34,
+          "fileCategory": "code"
+        },
+        {
+          "path": "kmb app/Theme.swift",
+          "language": "swift",
+          "sizeLines": 62,
+          "fileCategory": "code"
+        },
+        {
+          "path": "kmb app/ViewModels/HomeViewModel.swift",
+          "language": "swift",
+          "sizeLines": 199,
+          "fileCategory": "code"
+        },
+        {
+          "path": "kmb app/ViewModels/RouteDetailViewModel.swift",
+          "language": "swift",
+          "sizeLines": 238,
+          "fileCategory": "code"
+        },
+        {
+          "path": "kmb app/ViewModels/SearchViewModel.swift",
+          "language": "swift",
+          "sizeLines": 100,
+          "fileCategory": "code"
+        },
+        {
+          "path": "kmb app/Views/HomeView.swift",
+          "language": "swift",
+          "sizeLines": 157,
+          "fileCategory": "code"
+        }
+      ],
+      "batchImportData": {
+        "AGENTS.md": [],
+        "kmb app.xcodeproj/project.pbxproj": [],
+        "kmb app.xcodeproj/project.xcworkspace/contents.xcworkspacedata": [],
+        "kmb app.xcodeproj/project.xcworkspace/xcshareddata/WorkspaceSettings.xcsettings": [],
+        "kmb app.xcodeproj/project.xcworkspace/xcuserdata/j__tin.xcuserdatad/WorkspaceSettings.xcsettings": [],
+        "kmb app.xcodeproj/xcuserdata/j__tin.xcuserdatad/xcschemes/xcschememanagement.plist": [],
+        "kmb app/Assets.xcassets/AccentColor.colorset/Contents.json": [],
+        "kmb app/Assets.xcassets/AppIcon.appiconset/Contents.json": [],
+        "kmb app/Assets.xcassets/Contents.json": [],
+        "kmb app/Color+App.swift": [],
+        "kmb app/Models/ArrivalETA.swift": [],
+        "kmb app/Models/BusOperator.swift": [],
+        "kmb app/Models/BusRoute.swift": [],
+        "kmb app/Models/BusStop.swift": [],
+        "kmb app/Network/KMBAPIClient.swift": [],
+        "kmb app/Network/KMBDataTypes.swift": [],
+        "kmb app/Persistence/AppDatabase.swift": [],
+        "kmb app/Persistence/RouteRepository.swift": [],
+        "kmb app/Persistence/StopRepository.swift": [],
+        "kmb app/Persistence/SyncMetaRepository.swift": [],
+        "kmb app/Theme.swift": [],
+        "kmb app/ViewModels/HomeViewModel.swift": [],
+        "kmb app/ViewModels/RouteDetailViewModel.swift": [],
+        "kmb app/ViewModels/SearchViewModel.swift": [],
+        "kmb app/Views/HomeView.swift": []
+      },
+      "neighborMap": {}
+    },
+    {
+      "batchIndex": 3,
+      "files": [
+        {
+          "path": "kmb app/Views/LanguageHelper.swift",
+          "language": "swift",
+          "sizeLines": 38,
+          "fileCategory": "code"
+        },
+        {
+          "path": "kmb app/Views/RouteDetailView.swift",
+          "language": "swift",
+          "sizeLines": 200,
+          "fileCategory": "code"
+        },
+        {
+          "path": "kmb app/Views/SearchView.swift",
+          "language": "swift",
+          "sizeLines": 188,
+          "fileCategory": "code"
+        },
+        {
+          "path": "kmb app/Views/SettingsView.swift",
+          "language": "swift",
+          "sizeLines": 42,
+          "fileCategory": "code"
+        },
+        {
+          "path": "kmb app/kmb_appApp.swift",
+          "language": "swift",
+          "sizeLines": 120,
+          "fileCategory": "code"
+        },
+        {
+          "path": "kmb app/service docs/.~lock.KMB_ETA_iOS_App_PRD_v0.3.md#",
+          "language": "md#",
+          "sizeLines": 0,
+          "fileCategory": "code"
+        },
+        {
+          "path": "kmb app/service docs/.~lock.KMB_ETA_iOS_App_TRD_v0.3.md#",
+          "language": "md#",
+          "sizeLines": 0,
+          "fileCategory": "code"
+        },
+        {
+          "path": "kmb appTests/kmb_appTests.swift",
+          "language": "swift",
+          "sizeLines": 19,
+          "fileCategory": "code"
+        },
+        {
+          "path": "kmb appUITests/kmb_appUITests.swift",
+          "language": "swift",
+          "sizeLines": 43,
+          "fileCategory": "code"
+        },
+        {
+          "path": "kmb appUITests/kmb_appUITestsLaunchTests.swift",
+          "language": "swift",
+          "sizeLines": 35,
+          "fileCategory": "code"
+        }
+      ],
+      "batchImportData": {
+        "kmb app/Views/LanguageHelper.swift": [],
+        "kmb app/Views/RouteDetailView.swift": [],
+        "kmb app/Views/SearchView.swift": [],
+        "kmb app/Views/SettingsView.swift": [],
+        "kmb app/kmb_appApp.swift": [],
+        "kmb app/service docs/.~lock.KMB_ETA_iOS_App_PRD_v0.3.md#": [],
+        "kmb app/service docs/.~lock.KMB_ETA_iOS_App_TRD_v0.3.md#": [],
+        "kmb appTests/kmb_appTests.swift": [],
+        "kmb appUITests/kmb_appUITests.swift": [],
+        "kmb appUITests/kmb_appUITestsLaunchTests.swift": []
+      },
+      "neighborMap": {}
+    }
+  ]
+}

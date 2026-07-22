@@ -1,0 +1,50 @@
+{
+  "issues": [
+    "Edge[34] tgt 'config:kmb app.xcodeproj/project.pbxproj' not found",
+    "Layer 'layer:theme-config' refs missing 'config:kmb app.xcodeproj/project.pbxproj'",
+    "Layer 'layer:theme-config' refs missing 'config:kmb app.xcodeproj/project.xcworkspace/contents.xcworkspacedata'",
+    "Layer 'layer:theme-config' refs missing 'config:kmb app.xcodeproj/project.xcworkspace/xcshareddata/WorkspaceSettings.xcsettings'",
+    "File node 'file:kmb app.xcodeproj/project.pbxproj' not in any layer",
+    "File node 'file:kmb app.xcodeproj/project.xcworkspace/contents.xcworkspacedata' not in any layer",
+    "File node 'file:kmb app.xcodeproj/project.xcworkspace/xcshareddata/WorkspaceSettings.xcsettings' not in any layer",
+    "File node 'file:kmb app.xcodeproj/project.xcworkspace/xcuserdata/j__tin.xcuserdatad/WorkspaceSettings.xcsettings' not in any layer",
+    "File node 'config:kmb app.xcodeproj/xcuserdata/j__tin.xcuserdatad/xcschemes/xcschememanagement.plist' not in any layer",
+    "File node 'file:kmb app/service docs/.~lock.KMB_ETA_iOS_App_PRD_v0.3.md#' not in any layer",
+    "File node 'file:kmb app/service docs/.~lock.KMB_ETA_iOS_App_TRD_v0.3.md#' not in any layer"
+  ],
+  "warnings": [
+    "Node 'document:AGENTS.md' orphan (no edges)",
+    "Node 'file:kmb app.xcodeproj/project.pbxproj' orphan (no edges)",
+    "Node 'file:kmb app.xcodeproj/project.xcworkspace/contents.xcworkspacedata' orphan (no edges)",
+    "Node 'file:kmb app.xcodeproj/project.xcworkspace/xcshareddata/WorkspaceSettings.xcsettings' orphan (no edges)",
+    "Node 'file:kmb app.xcodeproj/project.xcworkspace/xcuserdata/j__tin.xcuserdatad/WorkspaceSettings.xcsettings' orphan (no edges)",
+    "Node 'config:kmb app.xcodeproj/xcuserdata/j__tin.xcuserdatad/xcschemes/xcschememanagement.plist' orphan (no edges)",
+    "Node 'config:kmb app/Assets.xcassets/AccentColor.colorset/Contents.json' orphan (no edges)",
+    "Node 'config:kmb app/Assets.xcassets/AppIcon.appiconset/Contents.json' orphan (no edges)",
+    "Node 'config:kmb app/Assets.xcassets/Contents.json' orphan (no edges)",
+    "Node 'file:kmb app/Models/BusOperator.swift' orphan (no edges)",
+    "Node 'file:kmb app/Persistence/SyncMetaRepository.swift' orphan (no edges)",
+    "Node 'file:kmb app/service docs/.~lock.KMB_ETA_iOS_App_PRD_v0.3.md#' orphan (no edges)",
+    "Node 'file:kmb app/service docs/.~lock.KMB_ETA_iOS_App_TRD_v0.3.md#' orphan (no edges)",
+    "Node 'file:kmb appUITests/kmb_appUITests.swift' orphan (no edges)",
+    "Node 'file:kmb appUITests/kmb_appUITestsLaunchTests.swift' orphan (no edges)"
+  ],
+  "stats": {
+    "totalNodes": 38,
+    "totalEdges": 36,
+    "totalLayers": 9,
+    "tourSteps": 10,
+    "nodeTypes": {
+      "document": 4,
+      "file": 30,
+      "config": 4
+    },
+    "edgeTypes": {
+      "imports": 30,
+      "calls": 1,
+      "documents": 3,
+      "configures": 1,
+      "tested_by": 1
+    }
+  }
+}
