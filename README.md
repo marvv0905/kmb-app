@@ -1,6 +1,6 @@
 # KMBeeee
 
-Hong Kong bus ETA app — real-time arrival times for KMB routes and stops, using the [KMB open data API](https://data.etabus.gov.hk). Brutalist design, zero dependencies, raw SQLite.
+Hong Kong bus ETA app offering real-time arrival times for KMB routes and stops, using the [KMB open data API](https://data.etabus.gov.hk).
 
 ## Tech Stack
 
@@ -63,7 +63,7 @@ Defined in `Theme.swift`:
 - **Custom tab bar** — avoids iOS 26 UITabBar glassmorphism entirely
 - **Components**: BrutalStopMarker, BrutalStopRow, custom keypad (SearchView)
 
-## Known Issues
+## Known Issues (In progress)
 
 - **iOS 26 Simulator WAL index corruption** — if you see `index corruption at line 109433`, delete all `kmb_app.sqlite*` files from Simulator containers. App auto-recovers on next launch.
 - **Simulator location fallback** — Simulator returns Cupertino coordinates. Code auto-detects this (>5km from HK) and falls back to HK centre `(22.3193, 114.1694)`.
